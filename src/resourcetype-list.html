@@ -1,0 +1,17 @@
+<template>
+  <select>
+    <!-- <optgroup label="General">
+    <option value="apim">API Management</option>
+    <option value="id">Managed Identity</option>
+    <option value="mg">Management group</option>
+    <option value="policy">Policy definition</option>
+    <option value="rg">Resource Group</option>
+  </optgroup>
+  <optgroup label="Networking">
+    <option value="agw">Application gateway</option>
+  </optgroup> -->
+      <optgroup repeat.for="group of resourceTypeGroups" label="${group.name}">
+        <option repeat.for="resource of group.resources">${resource.name}</option>
+      </optgroup>
+    </select>
+</template>

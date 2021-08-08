@@ -1,3 +1,22 @@
 <template>
-  <h1>${message}</h1>
+  <require from="./resourcetype-list"></require>
+
+  <h1>Azure Resource Namer</h1>
+
+  <form>
+
+    <resourcetype-list ></resourcetype-list>
+
+    <workload></workload>
+    <input type="text" id="environment" value.bind="environment" />
+    <select id="region">
+      <option value="westus">US West</option>
+    </select>
+    <input type="number" id="instance" value.bind="instance" />
+
+  </form>
+
+  <div>
+    ${resourceName}
+  </div>
 </template>
