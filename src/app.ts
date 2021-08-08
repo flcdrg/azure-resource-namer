@@ -1,6 +1,7 @@
 
 import {computedFrom, inject} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
+import { faCopy, IconDefinition } from "@fortawesome/free-regular-svg-icons";
 
 @inject(EventAggregator)
 export class App {
@@ -13,9 +14,10 @@ export class App {
 
   regions: any;
 
-  ea: EventAggregator;
-  constructor(ea: EventAggregator) {
-    this.ea = ea;
+  copyIcon: IconDefinition;
+
+  constructor() {
+    this.copyIcon = faCopy;
     this.instance = 1;
     this.environment = "prod";
     this.workload = "myapp";
@@ -33,7 +35,7 @@ export class App {
     ]
   }
 
-  @computedFrom('selectedResourceType', 'environment', 'region', 'workload')
+  @computedFrom('selectedResourceType', 'environment', 'region', 'workload', 'instance')
   get resourceName(): string {
 
     let name = `${this.selectedResourceType}-${this.workload}-${this.environment}-${this.region}`;

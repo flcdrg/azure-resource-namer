@@ -1,26 +1,63 @@
 <template>
+  <require from="bootstrap/dist/css/bootstrap.css"></require>
   <require from="./resourcetype-list"></require>
   <require from="./workload"></require>
 
-  <h1>Azure Resource Namer</h1>
+  <div class="container">
 
-  <form>
+    <h1>Azure Resource Namer</h1>
 
-    Hey: ${message} ${workload} ${selectedResourceType}
-    
-    <resourcetype-list resource.two-way="selectedResourceType" ></resourcetype-list>
+    <p>A simple tool to help you name your Azure resources.</p>
+    <form>
 
-    <workload message.two-way="workload"></workload>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <resourcetype-list resource.two-way="selectedResourceType"></resourcetype-list>
+          </div>
 
-    <input type="text" id="environment" value.bind="environment" />
-    <select id="region" value.bind="region">
-      <option repeat.for="region of regions" model.bind="region.id" value="${region.id}">${region.name}</option>
-    </select>
-    <input type="number" id="instance" value.bind="instance" />
+          <div class="col">
+            <workload message.two-way="workload"></workload>
+          </div>
 
-  </form>
+          <div class="col">
+            <label for="environment" class="form-label">Environment</label>
+            <input class="form-control" type="text" id="environment" value.bind="environment" />
+          </div>
 
-  <div>
-    ${resourceName}
+          <div class="col">
+            <label for="region" class="form-label">Region</label>
+            <select class="form-control" id="region" value.bind="region">
+              <option repeat.for="region of regions" model.bind="region.id" value="${region.id}">${region.name}</option>
+            </select>
+          </div>
+
+          <div class="col">
+            <label for="instance" class="form-label">Instance</label>
+            <input class="form-control" type="number" id="instance" value.bind="instance" />
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+
+    <h2>Resource name</h2>
+
+    <div class="container">
+
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" value.one-way="resourceName" aria-multiline="false" readonly="" spellcheck="false"
+          tabindex="-1" aria-readonly="true" title="resource name">
+        <span class="input-group-text" id="basic-addon2">
+          <button type="button" class="btn-clipboard" title="Copy to clipboard" onclick="">
+            <font-awesome-icon icon.bind="copyIcon"></font-awesome-icon>
+          </button>
+        </span>
+      </div>
+    </div>
+
   </div>
+
 </template>

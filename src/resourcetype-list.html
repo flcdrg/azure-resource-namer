@@ -1,21 +1,22 @@
 <template>
 
-  <p>
-    resourceType: ${resource}
-  </p>
-  <select value.bind="resource">
-    <!-- <optgroup label="General">
-    <option value="apim">API Management</option>
-    <option value="id">Managed Identity</option>
-    <option value="mg">Management group</option>
-    <option value="policy">Policy definition</option>
-    <option value="rg">Resource Group</option>
-  </optgroup>
-  <optgroup label="Networking">
-    <option value="agw">Application gateway</option>
-  </optgroup> -->
-      <optgroup repeat.for="group of resourceTypeGroups" label="${group.name}">
+  <label for="resourceType" class="form-label">Resource type</label>
+
+  <select id="resourceType" class="form-control" value.bind="resource">
+      <!-- <optgroup repeat.for="group of resourceTypeGroups" label="${group.name}">
         <option repeat.for="resource of group.resources" model.bind="resource.id">${resource.name}</option>
+      </optgroup> -->
+      <optgroup label="General">
+
+      </optgroup>
+      <optgroup label="Networking">
+
+      </optgroup>
+      <optgroup label="Compute and Web">
+
+      </optgroup>
+      <optgroup label="Containers">
+        
       </optgroup>
     </select>
 </template>
