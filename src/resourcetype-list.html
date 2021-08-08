@@ -1,5 +1,9 @@
 <template>
-  <select>
+
+  <p>
+    resourceType: ${resource}
+  </p>
+  <select value.bind="resource">
     <!-- <optgroup label="General">
     <option value="apim">API Management</option>
     <option value="id">Managed Identity</option>
@@ -11,7 +15,7 @@
     <option value="agw">Application gateway</option>
   </optgroup> -->
       <optgroup repeat.for="group of resourceTypeGroups" label="${group.name}">
-        <option repeat.for="resource of group.resources">${resource.name}</option>
+        <option repeat.for="resource of group.resources" model.bind="resource.id">${resource.name}</option>
       </optgroup>
     </select>
 </template>

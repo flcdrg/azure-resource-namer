@@ -1,4 +1,4 @@
-import {inject} from 'aurelia-framework';
+import { bindable, bindingMode } from 'aurelia-framework';
 
 export class ResourcetypeList {
   resourceTypeGroups: {
@@ -9,7 +9,9 @@ export class ResourcetypeList {
         id: string;
       }[]    
   }[];
-  
+
+  @bindable({ defaultBindingMode: bindingMode.twoWay }) resource: string;
+
   constructor() {
     this.resourceTypeGroups = [
       {

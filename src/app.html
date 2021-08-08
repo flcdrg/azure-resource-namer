@@ -1,16 +1,20 @@
 <template>
   <require from="./resourcetype-list"></require>
+  <require from="./workload"></require>
 
   <h1>Azure Resource Namer</h1>
 
   <form>
 
-    <resourcetype-list ></resourcetype-list>
+    Hey: ${message} ${workload} ${selectedResourceType}
+    
+    <resourcetype-list resource.two-way="selectedResourceType" ></resourcetype-list>
 
-    <workload></workload>
+    <workload message.two-way="workload"></workload>
+
     <input type="text" id="environment" value.bind="environment" />
-    <select id="region">
-      <option value="westus">US West</option>
+    <select id="region" value.bind="region">
+      <option repeat.for="region of regions" model.bind="region.id" value="${region.id}">${region.name}</option>
     </select>
     <input type="number" id="instance" value.bind="instance" />
 
