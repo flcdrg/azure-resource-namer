@@ -2,6 +2,7 @@
   <require from="bootstrap/dist/css/bootstrap.css"></require>
   <require from="./resourcetype-list"></require>
   <require from="./workload"></require>
+  <require from="./region"></require>
 
   <div class="container">
 
@@ -26,10 +27,7 @@
           </div>
 
           <div class="col">
-            <label for="region" class="form-label">Region</label>
-            <select class="form-control" id="region" value.bind="region">
-              <option repeat.for="region of regions" model.bind="region.id" value="${region.id}">${region.name}</option>
-            </select>
+            <region name.two-way="selectedRegion"></region>
           </div>
 
           <div class="col">
