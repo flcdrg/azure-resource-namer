@@ -12,8 +12,6 @@ export class App {
   message: string;
   workload: string;
 
-  regions: any;
-
   copyIcon: IconDefinition;
 
   constructor() {
@@ -22,17 +20,8 @@ export class App {
     this.environment = "prod";
     this.workload = "myapp";
     this.message = "msg";
-
-    this.regions = [
-      {
-        id: 'westus',
-        name: 'US West'
-      },
-      {
-        id: 'eastus2',
-        name: 'US East 2'
-      }
-    ]
+    this.region = 'westus';
+    this.selectedResourceType = 'rg';
   }
 
   @computedFrom('selectedResourceType', 'environment', 'region', 'workload', 'instance')
