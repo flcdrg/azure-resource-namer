@@ -10,6 +10,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Use Node.js
       uses: actions/setup-node@v1
@@ -20,4 +22,15 @@ jobs:
       run: |
         yarn
         yarn build
-        
+
+    - name: GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2.5.0
+      with:
+        build_dir: dist
+        # committer: # optional
+        # author: # optional
+        # commit_message: # optional
+        # fqdn: # optional
+        jekyll: false # optional, default is true
+        #dry_run: # optional, default is false
+        #verbose: # optional, default is false    
