@@ -3,21 +3,174 @@
   <label for="resourceType" class="form-label">Resource type</label>
 
   <select id="resourceType" class="form-control" value.bind="resource">
-      <!-- <optgroup repeat.for="group of resourceTypeGroups" label="${group.name}">
-        <option repeat.for="resource of group.resources" model.bind="resource.id">${resource.name}</option>
-      </optgroup> -->
-      <optgroup label="General">
-        <option value="apim">API Management</option>
-        <option value="rg">Resource Group</option>
-      </optgroup>
-      <optgroup label="Networking">
+    <optgroup label="AI and Machine Learning">
+      <option value="srch">Azure Cognitive Search</option>
+      <option value="cog">Azure Cognitive Services</option>
+      <option value="mlw">Azure Machine Learning workspace</option>
+    </optgroup>
 
-      </optgroup>
-      <optgroup label="Compute and Web">
+    <optgroup label="Analytics and IoT">
+      <option value="as">Azure Analysis Services server</option>
+      <option value="dbw">Azure Databricks workspace</option>
+      <option value="asa">Azure Stream Analytics</option>
+      <option value="dec">Azure Data Explorer cluster</option>
+      <option value="dedb">Azure Data Explorer cluster database</option>
+      <option value="adf">Azure Data Factory</option>
+      <option value="dls">Data Lake Store account</option>
+      <option value="dla">Data Lake Analytics account</option>
+      <option value="evhns">Event Hubs namespace</option>
+      <option value="evh">Event hub</option>
+      <option value="evgd">Event Grid domain</option>
+      <option value="evgs">Event Grid subscriptions</option>
+      <option value="evgt">Event Grid topic</option>
+      <option value="hadoop">HDInsight - Hadoop cluster</option>
+      <option value="hbase">HDInsight - HBase cluster</option>
+      <option value="kafka">HDInsight - Kafka cluster</option>
+      <option value="spark">HDInsight - Spark cluster</option>
+      <option value="storm">HDInsight - Storm cluster</option>
+      <option value="mls">HDInsight - ML Services cluster</option>
+      <option value="iot">IoT hub</option>
+      <option value="provs">Provisioning services</option>
+      <option value="pcert">Provisioning services certificate</option>
+      <option value="pbi">Power BI Embedded</option>
+      <option value="tsi">Time Series Insights environment</option>
+    </optgroup>
 
-      </optgroup>
-      <optgroup label="Containers">
-        
-      </optgroup>
-    </select>
+    <optgroup label="Azure Virtual Desktop">
+      <option value="vdpool">Virtual desktop host pool</option>
+      <option value="vdag">Virtual desktop application group</option>
+      <option value="vdws">Virtual desktop workspace</option>
+    </optgroup>
+
+    <optgroup label="Compute and Web">
+      <option value="ase">App Service environment</option>
+      <option value="plan">App Service plan</option>
+      <option value="avail">Availability set</option>
+      <option value="arcs">Azure Arc enabled server</option>
+      <option value="arck">Azure Arc enabled Kubernetes cluster</option>
+      <option value="cld">Cloud service</option>
+      <option value="des">Disk encryption set</option>
+      <option value="func">Function app</option>
+      <option value="gal">Gallery</option>
+      <option value="osdisk">Managed disk (OS)</option>
+      <option value="disk">Managed disk (data)</option>
+      <option value="ntf">Notification Hubs</option>
+      <option value="ntfns">Notification Hubs namespace</option>
+      <option value="snap">Snapshot</option>
+      <option value="stapp">Static web app</option>
+      <option value="vm">Virtual machine</option>
+      <option value="vmss">Virtual machine scale set</option>
+      <option value="stvm">VM storage account</option>
+      <option value="app">Web app</option>
+    </optgroup>
+    <optgroup label="Containers">
+      <option value="aks">AKS cluster</option>
+      <option value="cr">Container registry</option>
+      <option value="ci">Container instance</option>
+      <option value="sf">Service Fabric cluster</option>
+    </optgroup>
+    <optgroup label="Databases">
+      <option value="cosmos">Azure Cosmos DB database</option>
+      <option value="redis">Azure Cache for Redis instance</option>
+      <option value="sql">Azure SQL Database server</option>
+      <option value="sqldb">Azure SQL database</option>
+      <option value="syn">Azure Synapse Analytics</option>
+      <option value="synw">Azure Synapse Analytics Workspaces</option>
+      <option value="syndp">Azure Synapse Analytics SQL Dedicated Pool</option>
+      <option value="synsp">Azure Synapse Analytics Spark Pool</option>
+      <option value="mysql">MySQL database</option>
+      <option value="psql">PostgreSQL database</option>
+      <option value="sqlstrdb">SQL Server Stretch Database</option>
+      <option value="sqlmi">SQL Managed Instance</option>
+    </optgroup>
+    <optgroup label="Developer tools">
+      <option value="appcs">App Configuration store</option>
+      <option value="sigr">SignalR</option>
+    </optgroup>
+
+    <optgroup label="General">
+      <option value="apim">API management service instance</option>
+      <option value="id">Managed Identity</option>
+      <option value="mg">Management group</option>
+      <option value="policy">Policy definition</option>
+      <option value="rg">Resource group</option>
+    </optgroup>
+
+    <optgroup label="Integration">
+      <option value="ia">Integration account</option>
+      <option value="logic">Logic apps</option>
+      <option value="sb">Service Bus</option>
+      <option value="sbq">Service Bus queue</option>
+      <option value="sbt">Service Bus topic</option>
+    </optgroup>
+
+    <optgroup label="Networking">
+      <option value="agw">Application gateway</option>
+      <option value="asg">Application security group (ASG)</option>
+      <option value="bas">Bastion</option>
+      <option value="cdnp">CDN profile</option>
+      <option value="cdne">CDN endpoint</option>
+      <option value="con">Connections</option>
+      <option value="dnsz">DNS</option>
+      <option value="pdnsz">DNS zone</option>
+      <option value="afw">Firewall</option>
+      <option value="afwp">Firewall policy</option>
+      <option value="erc">ExpressRoute circuit</option>
+      <option value="fd">Front Door instance</option>
+      <option value="fdfp">Front Door firewall policy</option>
+      <option value="lbi">Load balancer (internal)</option>
+      <option value="lbe">Load balancer (external)</option>
+      <option value="rule">Load balancer rule</option>
+      <option value="lgw">Local network gateway</option>
+      <option value="ng">NAT gateway</option>
+      <option value="nic">Network interface (NIC)</option>
+      <option value="nsg">Network security group (NSG)</option>
+      <option value="nsgsr">Network security group (NSG) security rules</option>
+      <option value="nw">Network Watcher</option>
+      <option value="pl">Private Link</option>
+      <option value="pip">Public IP address</option>
+      <option value="ippre">Public IP address prefix</option>
+      <option value="rf">Route filter</option>
+      <option value="rt">Route table</option>
+      <option value="se">Service endpoint</option>
+      <option value="traf">Traffic Manager profile</option>
+      <option value="udr">User defined route (UDR)</option>
+      <option value="vnet">Virtual network</option>
+      <option value="peer">Virtual network peering</option>
+      <option value="snet">Virtual network subnet</option>
+      <option value="vwan">Virtual WAN</option>
+      <option value="vpng">VPN Gateway</option>
+      <option value="vcn">VPN connection</option>
+      <option value="vst">VPN site</option>
+      <option value="vgw">Virtual network gateway</option>
+      <option value="waf">Web Application Firewall (WAF) policy</option>
+      <option value="wafrg">Web Application Firewall (WAF) policy rule group</option>
+    </optgroup>
+
+    <optgroup label="Management and governance">
+      <option value="aa">Automation account</option>
+      <option value="appi">Application Insights</option>
+      <option value="ag">Azure Monitor action group</option>
+      <option value="pview">Azure Purview instance</option>
+      <option value="bp">Blueprint</option>
+      <option value="bpa">Blueprint assignment</option>
+      <option value="kv">Key vault</option>
+      <option value="log">Log Analytics workspace</option>
+    </optgroup>
+
+    <optgroup label="Migration">
+      <option value="migr">Azure Migrate project</option>
+      <option value="dms">Database Migration Service instance</option>
+      <option value="rsv">Recovery Services vault</option>
+    </optgroup>
+
+    <optgroup label="Storage">
+      <option value="st">Storage account</option>
+      <option value="ssimp">Azure StorSimple</option>
+    </optgroup>
+
+    <optgroup label="Deprecated product names">
+      <option value="sqldw">Azure SQL Data Warehouse</option>
+    </optgroup>
+  </select>
 </template>
