@@ -3,6 +3,7 @@
   <require from="./resourcetype-list"></require>
   <require from="./workload"></require>
   <require from="./region"></require>
+  <require from="./app.css"></require>
 
   <div class="container">
 
@@ -48,9 +49,10 @@
       <div class="input-group mb-3">
         <input type="text" class="form-control" value.one-way="resourceName" aria-multiline="false" readonly="" spellcheck="false"
           tabindex="-1" aria-readonly="true" title="resource name">
-        <span class="input-group-text" id="basic-addon2">
-          <button type="button" class="btn-clipboard" title="Copy to clipboard" onclick="alert('not implemented yet')">
+        <span class="input-group-text copyTooltip" id="basic-addon2">
+          <button type="button" class="btn-clipboard" title="Copy to clipboard" click.trigger="copyToClipboard()">
             <font-awesome-icon icon.bind="copyIcon"></font-awesome-icon>
+            <span show.bind="copied" class="copyTooltiptext">Copied <font-awesome-icon icon.bind="copiedIcon"></font-awesome-icon></span>
           </button>
         </span>
       </div>
