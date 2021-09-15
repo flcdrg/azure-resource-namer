@@ -1,7 +1,7 @@
 
 import {computedFrom, inject} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
-import { faCopy, IconDefinition } from "@fortawesome/free-regular-svg-icons";
+import { faCopy, faCheckSquare, IconDefinition } from "@fortawesome/free-regular-svg-icons";
 
 @inject(EventAggregator)
 export class App {
@@ -11,11 +11,15 @@ export class App {
   selectedResourceType: string;
   message: string;
   workload: string;
+  copied: boolean;
 
   copyIcon: IconDefinition;
+  copiedIcon: IconDefinition;
 
   constructor() {
     this.copyIcon = faCopy;
+    this.copiedIcon = faCheckSquare;
+    this.copied = false;
     this.instance = 1;
     this.environment = "prod";
     this.workload = "myapp";
@@ -35,4 +39,10 @@ export class App {
     return name;
   }
 
+  copyToClipboard() {
+    navigator.clipboard.writeText(this.resourceName).then(_ => {
+      this.copied = true;
+      setTimeout(() => this.copied = false, 2000);
+    });
+  }
 }
