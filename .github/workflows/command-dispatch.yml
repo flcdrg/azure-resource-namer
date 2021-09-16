@@ -1,0 +1,31 @@
+name: Slash Command Dispatch
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  slashCommandDispatch:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      - name: Slash Command Repository Dispatch
+        uses: peter-evans/slash-command-dispatch@v2
+        with:
+          token: ${{ secrets.PAT_REPO_FULL }}
+          commands: |
+            rebase
+          permission: write
+          issue-type: pull-request
+
+      - uses: xt0rted/pull-request-comment-branch@v1
+        id: comment-branch
+
+      - name: Slash Command Workflow Dispatch
+        uses: peter-evans/slash-command-dispatch@v2
+        with:
+          token: ${{ secrets.PAT_REPO_FULL }}
+          commands: |
+            lockfiles
+          permission: write
+          issue-type: pull-request
+          dispatch-type: workflow
+          static-args: ref=${{ steps.comment-branch.outputs.head_ref }}          
