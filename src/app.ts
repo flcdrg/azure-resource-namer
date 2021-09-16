@@ -2,13 +2,15 @@
 import {computedFrom, inject} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
 import { faCopy, faCheckSquare, IconDefinition } from "@fortawesome/free-regular-svg-icons";
+import { IResource } from 'resourcetype-list';
+require('format-unicorn');
 
 @inject(EventAggregator)
 export class App {
   instance: number;
   environment: string;
   region: string;
-  selectedResourceType: string;
+  selectedResource: IResource;
   message: string;
   workload: string;
   copied: boolean;
@@ -25,16 +27,25 @@ export class App {
     this.workload = "myapp";
     this.message = "msg";
     this.region = 'westus';
-    this.selectedResourceType = 'rg';
+    this.selectedResource = { abbrev: 'rg', name: ''};
   }
 
-  @computedFrom('selectedResourceType', 'environment', 'region', 'workload', 'instance')
+  @computedFrom('selectedResource', 'environment', 'region', 'workload', 'instance')
   get resourceName(): string {
 
-    let name = `${this.selectedResourceType}-${this.workload}-${this.environment}-${this.region}`;
-    if (this.instance > 0) {
-      name += `-${String(this.instance).padStart(3, '0')}`;
-    } 
+    let pattern: string;
+    if (this.selectedResource.pattern) {
+      pattern = this.selectedResource.pattern;
+    } else {
+      // Default pattern
+      pattern = '{resource}-{workload}-{environment}-{region}'
+
+      if (this.instance > 0) {
+        pattern += '-{instance}'
+      }
+    }
+
+    let name = pattern.formatUnicorn({ resource: this.selectedResource.abbrev, workload: this.workload, environment: this.environment, region: this.region, instance: String(this.instance).padStart(3, '0') });
 
     return name;
   }
