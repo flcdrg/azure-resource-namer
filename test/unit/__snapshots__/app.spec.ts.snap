@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stage App Component should render output 1`] = `
+"<app class=\\"au-target\\" au-target-id=\\"19\\">
+  
+  
+  
+  
+  
+
+  <div class=\\"container\\">
+
+    <h1>Azure Resource Namer</h1>
+
+    <p>A simple tool to help you name your Azure resources.</p>
+
+    <form>
+
+      <div class=\\"container\\">
+        <div class=\\"row\\">
+          <div class=\\"col\\">
+            <resourcetype-list resource.two-way=\\"selectedResource\\" class=\\"au-target\\" au-target-id=\\"9\\">
+  <label for=\\"resourceType\\" class=\\"form-label\\">Resource type</label>
+
+  <select id=\\"resourceType\\" value.bind=\\"resource\\" matcher.bind=\\"resourceMatcher\\" class=\\"form-control au-target\\" au-target-id=\\"2\\">
+    <optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"General\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"apim\\">
+        API management service instance
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"id\\">
+        Managed Identity
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"mg\\">
+        Management group
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"policy\\">
+        Policy definition
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"rg\\">
+        Resource group
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Networking\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"agw\\">
+        Application gateway
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"asg\\">
+        Application security group (ASG)
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"bas\\">
+        Bastion
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"cdnp\\">
+        CDN profile
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"cdne\\">
+        CDN endpoint
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"con\\">
+        Connections
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"dnsz\\">
+        DNS
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"pdnsz\\">
+        DNS zone
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"afw\\">
+        Firewall
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"afwp\\">
+        Firewall policy
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"erc\\">
+        ExpressRoute circuit
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"fd\\">
+        Front Door instance
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"fdfp\\">
+        Front Door firewall policy
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"lbi\\">
+        Load balancer (internal)
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"lbe\\">
+        Load balancer (external)
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"rule\\">
+        Load balancer rule
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"lgw\\">
+        Local network gateway
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ng\\">
+        NAT gateway
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"nic\\">
+        Network interface (NIC)
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"nsg\\">
+        Network security group (NSG)
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"nsgsr\\">
+        Network security group (NSG) security rules
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"nw\\">
+        Network Watcher
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"pl\\">
+        Private Link
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"pip\\">
+        Public IP address
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ippre\\">
+        Public IP address prefix
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"rf\\">
+        Route filter
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"rt\\">
+        Route table
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"se\\">
+        Service endpoint
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"traf\\">
+        Traffic Manager profile
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"udr\\">
+        User defined route (UDR)
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vnet\\">
+        Virtual network
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"peer\\">
+        Virtual network peering
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"snet\\">
+        Virtual network subnet
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vwan\\">
+        Virtual WAN
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vpng\\">
+        VPN Gateway
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vcn\\">
+        VPN connection
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vst\\">
+        VPN site
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vgw\\">
+        Virtual network gateway
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"waf\\">
+        Web Application Firewall (WAF) policy
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"wafrg\\">
+        Web Application Firewall (WAF) policy rule group
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Compute and Web\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ase\\">
+        App Service environment
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"plan\\">
+        App Service plan
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"avail\\">
+        Availability set
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"arcs\\">
+        Azure Arc enabled server
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"arck\\">
+        Azure Arc enabled Kubernetes cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"cld\\">
+        Cloud service
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"des\\">
+        Disk encryption set
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"func\\">
+        Function app
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"gal\\">
+        Gallery
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"osdisk\\">
+        Managed disk (OS)
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"disk\\">
+        Managed disk (data)
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ntf\\">
+        Notification Hubs
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ntfns\\">
+        Notification Hubs namespace
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"snap\\">
+        Snapshot
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"stapp\\">
+        Static web app
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vm\\">
+        Virtual machine
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vmss\\">
+        Virtual machine scale set
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"stvm\\">
+        VM storage account
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"app\\">
+        Web app
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Containers\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"aks\\">
+        AKS cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"cr\\">
+        Container registry
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ci\\">
+        Container instance
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sf\\">
+        Service Fabric cluster
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Databases\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"cosmos\\">
+        Azure Cosmos DB database
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"redis\\">
+        Azure Cache for Redis instance
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sql\\">
+        Azure SQL Database server
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sqldb\\">
+        Azure SQL database
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"syn\\">
+        Azure Synapse Analytics
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"synw\\">
+        Azure Synapse Analytics Workspaces
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"syndp\\">
+        Azure Synapse Analytics SQL Dedicated Pool
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"synsp\\">
+        Azure Synapse Analytics Spark Pool
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"mysql\\">
+        MySQL database
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"psql\\">
+        PostgreSQL database
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sqlstrdb\\">
+        SQL Server Stretch Database
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sqlmi\\">
+        SQL Managed Instance
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Storage\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"st\\">
+        Storage account
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ssimp\\">
+        Azure StorSimple
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"AI and Machine Learning\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"srch\\">
+        Azure Cognitive Search
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"cog\\">
+        Azure Cognitive Services
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"mlw\\">
+        Azure Machine Learning workspace
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Analytics and IoT\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"as\\">
+        Azure Analysis Services server
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"dbw\\">
+        Azure Databricks workspace
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"asa\\">
+        Azure Stream Analytics
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"dec\\">
+        Azure Data Explorer cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"dedb\\">
+        Azure Data Explorer cluster database
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"adf\\">
+        Azure Data Factory
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"dls\\">
+        Data Lake Store account
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"dla\\">
+        Data Lake Analytics account
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"evhns\\">
+        Event Hubs namespace
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"evh\\">
+        Event hub
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"evgd\\">
+        Event Grid domain
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"evgs\\">
+        Event Grid subscriptions
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"evgt\\">
+        Event Grid topic
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"hadoop\\">
+        HDInsight - Hadoop cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"hbase\\">
+        HDInsight - HBase cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"kafka\\">
+        HDInsight - Kafka cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"spark\\">
+        HDInsight - Spark cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"storm\\">
+        HDInsight - Storm cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"mls\\">
+        HDInsight - ML Services cluster
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"iot\\">
+        IoT hub
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"provs\\">
+        Provisioning services
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"pcert\\">
+        Provisioning services certificate
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"pbi\\">
+        Power BI Embedded
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"tsi\\">
+        Time Series Insights environment
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Azure Virtual Desktop\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vdpool\\">
+        Virtual desktop host pool
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vdag\\">
+        Virtual desktop application group
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"vdws\\">
+        Virtual desktop workspace
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Developer tools\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"appcs\\">
+        App Configuration store
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sigr\\">
+        SignalR
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Integration\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ia\\">
+        Integration account
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"logic\\">
+        Logic apps
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sb\\">
+        Service Bus
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sbq\\">
+        Service Bus queue
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sbt\\">
+        Service Bus topic
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Management and governance\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"aa\\">
+        Automation account
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"appi\\">
+        Application Insights
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"ag\\">
+        Azure Monitor action group
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"pview\\">
+        Azure Purview instance
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"bp\\">
+        Blueprint
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"bpa\\">
+        Blueprint assignment
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"kv\\">
+        Key vault
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"log\\">
+        Log Analytics workspace
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Migration\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"migr\\">
+        Azure Migrate project
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"dms\\">
+        Database Migration Service instance
+      </option><option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"rsv\\">
+        Recovery Services vault
+      </option><!--anchor-->
+    </optgroup><optgroup label.bind=\\"category.category\\" class=\\"au-target\\" au-target-id=\\"3\\" label=\\"Deprecated product names\\">
+      <option value.bind=\\"resource.abbrev\\" model.bind=\\"resource\\" class=\\"au-target\\" au-target-id=\\"4\\" value=\\"sqldw\\">
+        Azure SQL Data Warehouse
+      </option><!--anchor-->
+    </optgroup><!--anchor-->
+  </select>
+
+</resourcetype-list>
+          </div>
+
+          <div class=\\"col\\">
+            <workload message.two-way=\\"workload\\" class=\\"au-target\\" au-target-id=\\"10\\">
+  <label for=\\"workload\\" class=\\"form-label\\">Workload</label>
+
+  <input class=\\"form-control au-target\\" id=\\"workload\\" type=\\"text\\" value.bind=\\"message\\" au-target-id=\\"8\\">
+</workload>
+          </div>
+
+          <div class=\\"col\\">
+            <label for=\\"environment\\" class=\\"form-label\\">Environment</label>
+            <input class=\\"form-control au-target\\" type=\\"text\\" id=\\"environment\\" value.bind=\\"environment\\" au-target-id=\\"11\\">
+          </div>
+
+          <div class=\\"col\\">
+            <region name.two-way=\\"region\\" class=\\"au-target\\" au-target-id=\\"12\\">
+  <label for=\\"region\\" class=\\"form-label\\">Region</label>
+  <select class=\\"form-control au-target\\" id=\\"region\\" value.bind=\\"name\\" au-target-id=\\"1\\">
+    <optgroup label=\\"Africa\\">
+      <option value=\\"southafricanorth\\" title=\\"Johannesburg\\">South Africa North</option>
+      <option value=\\"southafricawest\\" title=\\"Cape Town\\">South Africa West</option>
+    </optgroup>
+    <optgroup label=\\"Asia Pacific\\">
+      <option value=\\"australiacentral\\" title=\\"Canberra\\">Australia Central</option>
+      <option value=\\"australiacentral2\\" title=\\"Canberra\\">Australia Central 2</option>
+      <option value=\\"australiaeast\\" title=\\"New South Wales\\">Australia East</option>
+      <option value=\\"australiasoutheast\\" title=\\"Victoria\\">Australia Southeast</option>
+      <option value=\\"centralindia\\" title=\\"Pune\\">Central India</option>
+      <option value=\\"eastasia\\" title=\\"Hong Kong\\">East Asia</option>
+      <option value=\\"japaneast\\" title=\\"Tokyo, Saitama\\">Japan East</option>
+      <option value=\\"japanwest\\" title=\\"Osaka\\">Japan West</option>
+      <option value=\\"jioindiacentral\\" title=\\"Nagpur\\">Jio India Central</option>
+      <option value=\\"jioindiawest\\" title=\\"Jamnagar\\">Jio India West</option>
+      <option value=\\"koreacentral\\" title=\\"Seoul\\">Korea Central</option>
+      <option value=\\"koreasouth\\" title=\\"Busan\\">Korea South</option>
+      <option value=\\"southeastasia\\" title=\\"Singapore\\">Southeast Asia</option>
+      <option value=\\"southindia\\" title=\\"Chennai\\">South India</option>
+      <option value=\\"westindia\\" title=\\"Mumbai\\">West India</option>
+    </optgroup>
+    <optgroup label=\\"Canada\\">
+      <option value=\\"canadacentral\\" title=\\"Toronto\\">Canada Central</option>
+      <option value=\\"canadaeast\\" title=\\"Quebec\\">Canada East</option>
+    </optgroup>
+    <optgroup label=\\"Europe\\">
+      <option value=\\"francecentral\\" title=\\"Paris\\">France Central</option>
+      <option value=\\"francesouth\\" title=\\"Marseille\\">France South</option>
+      <option value=\\"germanynorth\\" title=\\"Berlin\\">Germany North</option>
+      <option value=\\"germanywestcentral\\" title=\\"Frankfurt\\">Germany West Central</option>
+      <option value=\\"northeurope\\" title=\\"Ireland\\">North Europe</option>
+      <option value=\\"norwayeast\\" title=\\"Norway\\">Norway East</option>
+      <option value=\\"norwaywest\\" title=\\"Norway\\">Norway West</option>
+      <option value=\\"qatarcentral\\" title=\\"Doha\\">Qatar Central</option>
+      <option value=\\"swedencentral\\" title=\\"G�vle\\">Sweden Central</option>
+      <option value=\\"swedensouth\\" title=\\"Malmo\\">Sweden South</option>
+      <option value=\\"switzerlandnorth\\" title=\\"Zurich\\">Switzerland North</option>
+      <option value=\\"switzerlandwest\\" title=\\"Geneva\\">Switzerland West</option>
+      <option value=\\"uksouth\\" title=\\"London\\">UK South</option>
+      <option value=\\"ukwest\\" title=\\"Cardiff\\">UK West</option>
+      <option value=\\"westeurope\\" title=\\"Netherlands\\">West Europe</option>
+    </optgroup>
+    <optgroup label=\\"Middle East\\">
+      <option value=\\"uaecentral\\" title=\\"Abu Dhabi\\">UAE Central</option>
+      <option value=\\"uaenorth\\" title=\\"Dubai\\">UAE North</option>
+    </optgroup>
+    <optgroup label=\\"South America\\">
+      <option value=\\"brazilsouth\\" title=\\"Sao Paulo State\\">Brazil South</option>
+      <option value=\\"brazilsoutheast\\" title=\\"Rio\\">Brazil Southeast</option>
+    </optgroup>
+    <optgroup label=\\"US\\">
+      <option value=\\"centralus\\" title=\\"Iowa\\">Central US</option>
+      <option value=\\"centraluseuap\\" title=\\"\\">Central US EUAP</option>
+      <option value=\\"eastus\\" title=\\"Virginia\\">East US</option>
+      <option value=\\"eastus2\\" title=\\"Virginia\\">East US 2</option>
+      <option value=\\"eastus2euap\\" title=\\"\\">East US 2 EUAP</option>
+      <option value=\\"northcentralus\\" title=\\"Illinois\\">North Central US</option>
+      <option value=\\"southcentralus\\" title=\\"Texas\\">South Central US</option>
+      <option value=\\"westcentralus\\" title=\\"Wyoming\\">West Central US</option>
+      <option value=\\"westus\\" title=\\"California\\">West US</option>
+      <option value=\\"westus2\\" title=\\"Washington\\">West US 2</option>
+      <option value=\\"westus3\\" title=\\"Phoenix\\">West US 3</option>
+    </optgroup>
+  </select>
+</region>
+          </div>
+
+          <div class=\\"col\\">
+            <label for=\\"instance\\" class=\\"form-label\\">Instance</label>
+            <input class=\\"form-control au-target\\" type=\\"number\\" id=\\"instance\\" value.bind=\\"instance\\" au-target-id=\\"13\\">
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+
+    <h2>Resource name</h2>
+
+    <div class=\\"container\\">
+
+
+      <div class=\\"input-group mb-3\\">
+        <input type=\\"text\\" class=\\"form-control au-target\\" value.one-way=\\"resourceName\\" aria-multiline=\\"false\\" readonly=\\"\\" spellcheck=\\"false\\" tabindex=\\"-1\\" aria-readonly=\\"true\\" title=\\"resource name\\" au-target-id=\\"14\\">
+        <span class=\\"input-group-text copyTooltip\\" id=\\"basic-addon2\\">
+          <button type=\\"button\\" class=\\"btn-clipboard au-target\\" title=\\"Copy to clipboard\\" click.trigger=\\"copyToClipboard()\\" au-target-id=\\"15\\">
+            <font-awesome-icon icon.bind=\\"copyIcon\\" class=\\"au-target\\" au-target-id=\\"16\\"></font-awesome-icon>
+            <span show.bind=\\"copied\\" class=\\"copyTooltiptext au-target aurelia-hide\\" au-target-id=\\"17\\">Copied <font-awesome-icon icon.bind=\\"copiedIcon\\" class=\\"au-target\\" au-target-id=\\"18\\"></font-awesome-icon></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+</app>"
+`;
