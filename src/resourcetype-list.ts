@@ -4,7 +4,13 @@ export interface IResource {
   abbrev: string;
   name: string;
   pattern?: string;
+  instanceSuffix?: string;
+  minLength?: number;
+  maxLength?: number;
+  regex?: RegExp;
+  description?: string;
 }
+
 export class ResourcetypeList {
 
   @bindable({ defaultBindingMode: bindingMode.twoWay }) resource: IResource;
@@ -40,7 +46,12 @@ export class ResourcetypeList {
           },
           {
             abbrev: 'rg',
-            name: 'Resource group'
+            name: 'Resource group',
+            minLength: 1,
+            maxLength: 90,
+            // https://docs.microsoft.com/en-us/rest/api/resources/resource-groups/create-or-update#uri-parameters
+            regex: /^[-\w\._\(\)]+$/,
+            description: 'Alphanumerics, underscores, parentheses, hyphens, periods, and unicode characters that match the regex documentation. Can\'t end with period.'
           },
         ]
       },
@@ -365,12 +376,18 @@ export class ResourcetypeList {
         ]
       },
       {
+        // https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules#microsoftstorage
         category: 'Storage',
         assets: [
           {
             abbrev: 'st',
             name: 'Storage account',
-            pattern: '{resource}{workload}{environment}{region}'
+            pattern: '{resource}{workload}{environment}{region}',
+            instanceSuffix: '{instance}',
+            minLength: 3,
+            maxLength: 24,
+            regex: /^[a-z0-9]+$/,
+            description: 'Lowercase letters and numbers'
           },
           {
             abbrev: 'ssimp',
