@@ -4,18 +4,20 @@
   <require from="./workload"></require>
   <require from="./region"></require>
   <require from="./app.css"></require>
+  <require from="./setvalid"></require>
 
   <div class="container">
 
     <h1>Azure Resource Namer</h1>
 
     <p>A simple tool to help you name your Azure resources.</p>
-    <form>
+
+    <form class="needs-validation">
 
       <div class="container">
         <div class="row">
           <div class="col">
-            <resourcetype-list resource.two-way="selectedResourceType"></resourcetype-list>
+            <resourcetype-list resource.two-way="selectedResource"></resourcetype-list>
           </div>
 
           <div class="col">
@@ -39,24 +41,28 @@
         </div>
       </div>
 
-    </form>
+      <h2>Resource name</h2>
 
-    <h2>Resource name</h2>
+      <div class="container">
 
-    <div class="container">
-
-
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" value.one-way="resourceName" aria-multiline="false" readonly="" spellcheck="false"
-          tabindex="-1" aria-readonly="true" title="resource name">
-        <span class="input-group-text copyTooltip" id="basic-addon2">
-          <button type="button" class="btn-clipboard" title="Copy to clipboard" click.trigger="copyToClipboard()">
-            <font-awesome-icon icon.bind="copyIcon"></font-awesome-icon>
-            <span show.bind="copied" class="copyTooltiptext">Copied <font-awesome-icon icon.bind="copiedIcon"></font-awesome-icon></span>
-          </button>
-        </span>
+        <div class="input-group mb-3">
+          <input id="resourceName" type="text" class="form-control has-validation" value.one-way="resourceName"
+            aria-multiline="false" readonly="" spellcheck="false" tabindex="-1" aria-readonly="true"
+            title="resource name" set-valid.bind="resourceNameValid" required>
+          <span class="input-group-text copyTooltip" id="basic-addon2">
+            <button type="button" class="btn-clipboard" title="Copy to clipboard" click.trigger="copyToClipboard()">
+              <font-awesome-icon icon.bind="copyIcon"></font-awesome-icon>
+              <span show.bind="copied" class="copyTooltiptext">Copied <font-awesome-icon icon.bind="copiedIcon">
+                </font-awesome-icon></span>
+            </button>
+          </span>
+          <!-- aria-describedby="validationServer03Feedback" -->
+          <div id="validationServer03Feedback" class="invalid-feedback"
+            innerhtml.bind="validationFeedback | sanitizeHTML"></div>
+        </div>
       </div>
-    </div>
+
+    </form>
 
   </div>
 
