@@ -28,3 +28,12 @@
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+}
