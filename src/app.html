@@ -10,7 +10,7 @@
 
     <h1>Azure Resource Namer</h1>
 
-    <p>A simple tool to help you name your Azure resources.</p>
+    <p>A simple tool to help you name your Azure resources, based on the <a href="https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming">Cloud Adoption Framework naming convention</a>.</p>
 
     <form class="needs-validation">
 
@@ -26,7 +26,7 @@
 
           <div class="col">
             <label for="environment" class="form-label">Environment</label>
-            <input class="form-control" type="text" id="environment" value.bind="environment" />
+            <input class="form-control" type="text" id="environment" value.bind="environment" title="The stage of the development lifecycle for the workload that the resource supports" />
           </div>
 
           <div class="col">
@@ -64,6 +64,9 @@
 
     </form>
 
+    <footer>
+      Source at <a href="https://github.com/flcdrg/azure-resource-namer">https://github.com/flcdrg/azure-resource-namer</a>
+    </footer>
   </div>
 
 </template>

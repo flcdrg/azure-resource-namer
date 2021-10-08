@@ -1,7 +1,7 @@
 <template>
   <label for="resourceType" class="form-label">Resource type</label>
 
-  <select id="resourceType" value.bind="resource" matcher.bind="resourceMatcher" class="form-control">
+  <select id="resourceType" value.bind="resource" matcher.bind="resourceMatcher" class="form-control" title="An abbreviation that represents the type of Azure resource or asset">
     <optgroup repeat.for="category of resources" label.bind="category.category" >
       <option repeat.for="resource of category.assets" value.bind="resource.abbrev" model.bind="resource">
         ${resource.name}
