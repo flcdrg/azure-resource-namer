@@ -12,7 +12,6 @@ describe('formatting', () => {
     });
 
     describe('apim', () => {
-
       const resource = resources.find(f => f.category == 'General').assets.find(a => a.abbrev === 'apim');
 
       it('valid', () => {
@@ -28,7 +27,7 @@ describe('formatting', () => {
       });
 
       it('invalid', () => {
-        const result = formatResourceName(
+        formatResourceName(
           resource,
           'workloadthatmakesnametoolong',
           'prod',
@@ -38,6 +37,62 @@ describe('formatting', () => {
     
           expect(feedback.resourceNameValid).toBe(false);
       });
-    })
+    });
+
+    describe('id', () => {
+      const resource = resources.find(f => f.category == 'General').assets.find(a => a.abbrev === 'id');
+
+      it('valid', () => {
+        const result = formatResourceName(
+          resource,
+          'workload_',
+          'prod',
+          'australiasoutheast',
+          1,
+          feedback);
+    
+          expect(result).toMatchInlineSnapshot(`"id-workload_-prod-australiasoutheast-001"`);
+      });
+
+      it('invalid', () => {
+        formatResourceName(
+          resource,
+          'workload!',
+          'prod',
+          'australiasoutheast',
+          1,
+          feedback);
+    
+          expect(feedback.resourceNameValid).toBe(false);
+      });
+    });
+
+    describe('rg', () => {
+      const resource = resources.find(f => f.category == 'General').assets.find(a => a.abbrev === 'rg');
+
+      it('valid', () => {
+        const result = formatResourceName(
+          resource,
+          'workload',
+          'prod',
+          'australiasoutheast',
+          1,
+          feedback);
+    
+          expect(result).toMatchInlineSnapshot(`"rg-workload-prod-australiasoutheast-001"`);
+      });
+
+      it('invalid', () => {
+        formatResourceName(
+          resource,
+          'workload!',
+          'prod',
+          'australiasoutheast',
+          1,
+          feedback);
+    
+          expect(feedback.resourceNameValid).toBe(false);
+      });
+    });
   });
 })
