@@ -21,3 +21,5 @@ jobs:
         yarn
         yarn build
         
+    - name: Test
+      run: yarn jest
