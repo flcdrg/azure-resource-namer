@@ -5,7 +5,6 @@ export interface IResource {
   abbrev: string;
   name: string;
   pattern?: string;
-  instanceSuffix?: string;
   minLength?: number;
   maxLength?: number;
   regex?: RegExp;
