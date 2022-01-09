@@ -8,13 +8,13 @@ export interface IFeedback {
 
 export function formatResourceName(selectedResource: IResource, workload: string, environment: string, region: string, instance: number, feedback: IFeedback) {
 
-  let pattern = selectedResource.pattern ?? '{resource}-{workload}-{environment}-{region}';
+  let pattern = selectedResource.pattern ?? '{resource}-{workload}-{environment}-{region}-{instance}';
 
-  if (instance > 0) {
-    pattern += selectedResource.instanceSuffix ?? '-{instance}';
-  }
+  const instanceString = instance > 0 ? String(instance).padStart(3, '0') : '';
 
-  const name = pattern.formatUnicorn({ resource: selectedResource.abbrev, workload: workload, environment: environment, region: region, instance: String(instance).padStart(3, '0') });
+  const name = pattern.formatUnicorn({ resource: selectedResource.abbrev, workload: workload, environment: environment, region: region, instance: instanceString })
+    .replace(/\-+/g, '-') // Remove double dashes (from an empty field)
+    .replace(/\-+$/, ''); // Remove trailing dash(es)
 
   if (name.length > selectedResource?.maxLength) {
     feedback.validationFeedback = `Length exceeds maximum ${selectedResource.maxLength} characters`;

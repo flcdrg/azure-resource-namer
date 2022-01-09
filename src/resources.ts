@@ -377,8 +377,7 @@ export const resources :
       {
         abbrev: 'st',
         name: 'Storage account',
-        pattern: '{resource}{workload}{environment}{region}',
-        instanceSuffix: '{instance}',
+        pattern: '{resource}{workload}{environment}{region}{instance}',
         minLength: 3,
         maxLength: 24,
         regex: /^[a-z0-9]+$/,
