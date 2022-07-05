@@ -7,7 +7,7 @@ $grouped = az account list-locations | ConvertFrom-Json -Depth 5 | Where-Object 
 
 '<template>
   <label for="region" class="form-label">Region</label>
-  <select class="form-control" id="region" value.bind="region">
+  <select class="form-control" id="region" value.bind="name" title="The Azure region where the resource is deployed">
 '
 
   foreach ($group in $grouped) {

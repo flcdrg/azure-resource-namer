@@ -7,7 +7,7 @@ export class SetValidCustomAttribute {
   constructor(private element: Element){
   }
 
-  valueChanged(newValue: boolean, oldValue: boolean){
+  valueChanged(newValue: boolean, oldValue: boolean): void {
     const element = (<HTMLInputElement>this.element);
 
     if (newValue) {

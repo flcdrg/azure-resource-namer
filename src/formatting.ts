@@ -6,7 +6,7 @@ export interface IFeedback {
   resourceNameValid: boolean;
 }
 
-export function formatResourceName(selectedResource: IResource, workload: string, environment: string, region: string, instance: number, feedback: IFeedback) {
+export function formatResourceName(selectedResource: IResource, workload: string, environment: string, region: string, instance: number, feedback: IFeedback): string {
 
   const pattern = selectedResource.pattern ?? '{resource}-{workload}-{environment}-{region}-{instance}';
 
