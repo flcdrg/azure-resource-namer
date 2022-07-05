@@ -7,7 +7,8 @@ export function configure(aurelia: Aurelia): void {
     .standardConfiguration()
     .plugin(PLATFORM.moduleName("aurelia-fontawesome"))
     .plugin(PLATFORM.moduleName('aurelia-validation'))
-    .feature(PLATFORM.moduleName('resources/index'));
+    .feature(PLATFORM.moduleName('resources/index'))
+    .plugin(PLATFORM.moduleName('@appex/aurelia-dompurify'));
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
 
