@@ -42,7 +42,7 @@ export class App implements IFeedback {
     return formatResourceName(this.selectedResource, this.workload, this.environment, this.region, this.instance, this);
   }
 
-  copyToClipboard() {
+  copyToClipboard(): void {
     navigator.clipboard.writeText(this.resourceName).then(_ => {
       this.copied = true;
       setTimeout(() => this.copied = false, 2000);
