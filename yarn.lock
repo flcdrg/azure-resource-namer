@@ -10,6 +10,16 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@appex/aurelia-dompurify@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@appex/aurelia-dompurify/-/aurelia-dompurify-0.5.0.tgz#4d881e4b23f8cb72558f027deea8bcd828ae52ee"
+  integrity sha512-y4jsP+CHfOChrR5cMBJvbLOdAG22dG/yhkP+Ks9XJhOapXogbI6QYxG0wAH+a5LBS1ivy4nKRUht1YsuMJc2eA==
+  dependencies:
+    "@types/dompurify" "^2.2.2"
+    aurelia-logging "^1.0.0"
+    aurelia-templating-resources "^1.7.0"
+    dompurify "^2.2.8"
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -806,6 +816,13 @@
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-0.0.29.tgz#a1e514adfbd92f03a224ba54d693111dbf1f3754"
   integrity sha512-e+ecEzEzjUcoWIx/Sc1rNGGCQPIutBoe8Fh/4C9GarzmpwaqT90Jqkud+nJg9AODR/VOSjMyIJ5gMunZ/5hB2A==
 
+"@types/dompurify@^2.2.2":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/dompurify/-/dompurify-2.3.3.tgz#c24c92f698f77ed9cc9d9fa7888f90cf2bfaa23f"
+  integrity sha512-nnVQSgRVuZ/843oAfhA25eRSNzUFcBPk/LOiw5gm8mD9/X7CNcbRkQu/OsjCewO8+VIYfPxUnXvPEVGenw14+w==
+  dependencies:
+    "@types/trusted-types" "*"
+
 "@types/find-cache-dir@^3.2.1":
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/@types/find-cache-dir/-/find-cache-dir-3.2.1.tgz#7b959a4b9643a1e6a1a5fe49032693cc36773501"
@@ -926,6 +943,11 @@
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.8.tgz#b94a4391c85666c7b73299fd3ad79d4faa435310"
   integrity sha512-ipixuVrh2OdNmauvtT51o3d8z12p6LtFW9in7U79der/kwejjdNchQC5UMn5u/KxNoM7VHHOs/l8KS8uHxhODQ==
+
+"@types/trusted-types@*":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
+  integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
 
 "@types/uglify-js@*":
   version "3.16.0"
@@ -1923,7 +1945,7 @@ aurelia-templating-binding@^1.6.0:
     aurelia-logging "^1.0.0"
     aurelia-templating "^1.11.1"
 
-aurelia-templating-resources@^1.14.1:
+aurelia-templating-resources@^1.14.1, aurelia-templating-resources@^1.14.3, aurelia-templating-resources@^1.7.0:
   version "1.14.3"
   resolved "https://registry.yarnpkg.com/aurelia-templating-resources/-/aurelia-templating-resources-1.14.3.tgz#5ddc54dca42ec3ec5e8be95183d8348da2cd26b0"
   integrity sha512-8JbBSUC0PWg8/MQ3cui5JUnIrJs30iD4QM6C1g1cv5Uv17yLMnDdaRQd1TIDN1S4kAIUjubkV2M8IaYP0BY+2Q==
@@ -3541,6 +3563,11 @@ domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.1:
   integrity sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==
   dependencies:
     domelementtype "^2.2.0"
+
+dompurify@^2.2.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.3.8.tgz#224fe9ae57d7ebd9a1ae1ac18c1c1ca3f532226f"
+  integrity sha512-eVhaWoVibIzqdGYjwsBWodIQIaXFSB+cKDf4cfxLMsK0xiud6SE+/WCVx/Xw/UwQsa4cS3T2eITcdtmTg2UKcw==
 
 domutils@^2.0.0, domutils@^2.5.2, domutils@^2.8.0:
   version "2.8.0"

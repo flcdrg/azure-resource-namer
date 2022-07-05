@@ -8,7 +8,7 @@ export interface IFeedback {
 
 export function formatResourceName(selectedResource: IResource, workload: string, environment: string, region: string, instance: number, feedback: IFeedback) {
 
-  let pattern = selectedResource.pattern ?? '{resource}-{workload}-{environment}-{region}-{instance}';
+  const pattern = selectedResource.pattern ?? '{resource}-{workload}-{environment}-{region}-{instance}';
 
   const instanceString = instance > 0 ? String(instance).padStart(3, '0') : '';
 
