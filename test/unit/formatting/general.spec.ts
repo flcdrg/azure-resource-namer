@@ -21,6 +21,7 @@ describe('formatting', () => {
           'prod',
           'australiasoutheast',
           1,
+          true,
           feedback);
     
           expect(result).toMatchInlineSnapshot(`"apim-workload-prod-australiasoutheast-001"`);
@@ -33,6 +34,7 @@ describe('formatting', () => {
           'prod',
           'australiasoutheast',
           1,
+          true,
           feedback);
     
           expect(feedback.resourceNameValid).toBe(false);
@@ -49,6 +51,7 @@ describe('formatting', () => {
           'prod',
           'australiasoutheast',
           1,
+          true,
           feedback);
     
           expect(result).toMatchInlineSnapshot(`"id-workload_-prod-australiasoutheast-001"`);
@@ -61,6 +64,7 @@ describe('formatting', () => {
           'prod',
           'australiasoutheast',
           1,
+          true,
           feedback);
     
           expect(feedback.resourceNameValid).toBe(false);
@@ -77,6 +81,7 @@ describe('formatting', () => {
           'prod',
           'australiasoutheast',
           1,
+          true,
           feedback);
     
           expect(result).toMatchInlineSnapshot(`"rg-workload-prod-australiasoutheast-001"`);
@@ -89,6 +94,7 @@ describe('formatting', () => {
           'prod',
           'australiasoutheast',
           1,
+          true,
           feedback);
     
           expect(feedback.resourceNameValid).toBe(false);

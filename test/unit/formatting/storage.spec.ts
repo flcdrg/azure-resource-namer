@@ -21,6 +21,7 @@ describe('formatting', () => {
           'prod',
           'eastus',
           1,
+          true,
           feedback);
     
           expect(result).toMatchInlineSnapshot(`"stworkloadprodeastus001"`);
@@ -33,6 +34,7 @@ describe('formatting', () => {
           'prod',
           'eastus',
           1,
+          true,
           feedback);
     
           expect(feedback.resourceNameValid).toBe(false);

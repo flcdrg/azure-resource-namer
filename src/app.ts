@@ -19,6 +19,7 @@ export class App implements IFeedback {
   copied: boolean;
   resourceNameValid: boolean;
   validationFeedback: string;
+  includeRegion: boolean;
 
   copyIcon: IconDefinition;
   copiedIcon: IconDefinition;
@@ -35,11 +36,12 @@ export class App implements IFeedback {
     this.selectedResource = { abbrev: 'rg', name: ''};
     this.thingy = 'ah';
     this.resourceNameValid = true;
+    this.includeRegion = true;
   }
 
-  @computedFrom('selectedResource', 'environment', 'region', 'workload', 'instance')
+  @computedFrom('selectedResource', 'environment', 'region', 'workload', 'includeRegion', 'instance')
   get resourceName(): string {
-    return formatResourceName(this.selectedResource, this.workload, this.environment, this.region, this.instance, this);
+    return formatResourceName(this.selectedResource, this.workload, this.environment, this.region, this.instance, this.includeRegion, this);
   }
 
   copyToClipboard(): void {

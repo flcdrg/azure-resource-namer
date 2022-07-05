@@ -21,6 +21,7 @@ describe('formatting', () => {
           '',
           'australiasoutheast',
           1,
+          true,
           feedback);
     
           expect(result).toMatchInlineSnapshot(`"apim-workload-australiasoutheast-001"`);
@@ -33,6 +34,7 @@ describe('formatting', () => {
           '',
           'australiasoutheast',
           1,
+          true,
           feedback);
     
           expect(result).toMatchInlineSnapshot(`"apim-australiasoutheast-001"`);
@@ -45,6 +47,7 @@ describe('formatting', () => {
           'prod',
           'australiasoutheast',
           0,
+          true,
           feedback);
     
           expect(result).toMatchInlineSnapshot(`"apim-workload-prod-australiasoutheast"`);

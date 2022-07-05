@@ -6,13 +6,15 @@ export interface IFeedback {
   resourceNameValid: boolean;
 }
 
-export function formatResourceName(selectedResource: IResource, workload: string, environment: string, region: string, instance: number, feedback: IFeedback): string {
+export function formatResourceName(selectedResource: IResource, workload: string, environment: string, region: string, instance: number, includeRegion: boolean, feedback: IFeedback): string {
 
   const pattern = selectedResource.pattern ?? '{resource}-{workload}-{environment}-{region}-{instance}';
 
   const instanceString = instance > 0 ? String(instance).padStart(3, '0') : '';
 
-  const name = pattern.formatUnicorn({ resource: selectedResource.abbrev, workload: workload, environment: environment, region: region, instance: instanceString })
+  const useRegion = includeRegion ? region : '';
+
+  const name = pattern.formatUnicorn({ resource: selectedResource.abbrev, workload: workload, environment: environment, region: useRegion, instance: instanceString })
     .replace(/\-+/g, '-') // Remove double dashes (from an empty field)
     .replace(/\-+$/, ''); // Remove trailing dash(es)
 
