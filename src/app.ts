@@ -1,4 +1,3 @@
-import { Workload } from './workload';
 import {computedFrom, inject} from 'aurelia-framework';
 import {NewInstance} from 'aurelia-dependency-injection';
 import { faCopy, faCheckSquare, IconDefinition } from "@fortawesome/free-regular-svg-icons";
