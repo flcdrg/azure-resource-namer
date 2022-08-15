@@ -590,8 +590,13 @@ export const resources :
         name: 'Blueprint assignment'
       },
       {
+        // https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules?WT.mc_id=DOP-MVP-5001655#microsoftkeyvault
         abbrev: 'kv',
-        name: 'Key vault'
+        name: 'Key vault',
+        minLength: 3,
+        maxLength: 24,
+        // https://docs.microsoft.com/en-us/rest/api/keyvault/keyvault/vaults/create-or-update?tabs=HTTP
+        regex: /^[a-zA-Z0-9-]{3,24}$/
       },
       {
         abbrev: 'log',
