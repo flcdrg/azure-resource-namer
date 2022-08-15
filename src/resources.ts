@@ -596,7 +596,8 @@ export const resources :
         minLength: 3,
         maxLength: 24,
         // https://docs.microsoft.com/en-us/rest/api/keyvault/keyvault/vaults/create-or-update?tabs=HTTP
-        regex: /^[a-zA-Z0-9-]{3,24}$/
+        regex: /^[a-zA-Z0-9-]{3,24}$/,
+        description: 'Alphanumerics and hyphens. Start with letter. End with letter or digit. Can\'t contain consecutive hyphens.'
       },
       {
         abbrev: 'log',
