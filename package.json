@@ -55,7 +55,7 @@
     "tree-kill": "^1.2.2",
     "ts-jest": "^28.0.8",
     "ts-loader": "^8.4.0",
-    "typescript": "^4.7.4",
+    "typescript": "^4.8.2",
     "url-loader": "^4.1.1",
     "webpack": "^4.44.2",
     "webpack-bundle-analyzer": "^4.6.1",
