@@ -15,7 +15,7 @@
     "aurelia-fontawesome": "^1.0.0-beta.1",
     "aurelia-templating-resources": "^1.14.3",
     "aurelia-validation": "^2.0.0-rc2",
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^5.2.1",
     "format-unicorn": "^1.1.1"
   },
   "devDependencies": {
