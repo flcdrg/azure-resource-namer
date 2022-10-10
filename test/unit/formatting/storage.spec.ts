@@ -39,5 +39,20 @@ describe('formatting', () => {
       });
     });
 
+    describe('stc', () => {
+      const resource = resources.find(f => f.category == 'Storage').assets.find(a => a.abbrev === 'stc');
+
+      it('valid', () => {
+        const result = formatResourceName(
+          resource,
+          'workload',
+          'prod',
+          'eastus',
+          1,
+          feedback);
+    
+          expect(result).toMatchInlineSnapshot(`"workload"`);
+      });
+    });
   });
 })

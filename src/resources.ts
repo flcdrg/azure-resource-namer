@@ -384,6 +384,13 @@ export const resources :
         description: 'Lowercase letters and numbers'
       },
       {
+        abbrev: 'stc',
+        name: 'Storage account blob container',
+        pattern: '{workload}',
+        minLength: 3,
+        maxLength: 63
+      },
+      {
         abbrev: 'ssimp',
         name: 'Azure StorSimple'
       },
