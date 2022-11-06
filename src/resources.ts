@@ -248,7 +248,9 @@ export const resources :
       },
       {
         abbrev: 'func',
-        name: 'Function app'
+        name: 'Function app',
+        minLength: 2,
+        maxLength: 60
       },
       {
         abbrev: 'gal',
@@ -279,8 +281,12 @@ export const resources :
         name: 'Static web app'
       },
       {
+        // https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules#microsoftcompute
         abbrev: 'vm',
-        name: 'Virtual machine'
+        name: 'Virtual machine',
+        minLength: 1,
+        maxLength: 64,
+        description: 'Can\'t use spaces, control characters, or these characters: ~ ! @ # $ % ^ & * ( ) = + _ [ ] { } \\ | ; : . \' " , < > / ?\n Windows VMs can\'t include period or end with hyphen. \nLinux VMs can\'t end with period or hyphen.'
       },
       {
         abbrev: 'vmss',
@@ -291,8 +297,12 @@ export const resources :
         name: 'VM storage account'
       },
       {
+        // https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules#microsoftweb
         abbrev: 'app',
-        name: 'Web app'
+        name: 'Web app',
+        minLength: 2,
+        maxLength: 60,
+        description: 'Alphanumeric, hyphens and Unicode characters that can be mapped to Punycode. Can\'t start or end with hyphen.'
       },
     ]
   },
@@ -311,7 +321,8 @@ export const resources :
         minLength: 5,
         maxLength: 50,
         regex: /^[a-zA-Z0-9]*$/, // https://learn.microsoft.com/en-us/rest/api/containerregistry/registries/create?tabs=HTTP#uri-parameters
-        description: 'Alphanumerics'
+        description: 'Alphanumerics',
+        pattern: '{resource}{workload}{environment}{region}{instance}'
       },
       {
         // https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules#microsoftcontainerinstance

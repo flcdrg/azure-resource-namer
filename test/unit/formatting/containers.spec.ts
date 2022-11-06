@@ -23,7 +23,7 @@ describe('formatting', () => {
           1,
           feedback);
     
-          expect(result).toMatchInlineSnapshot(`"cr-workload-prod-eastus-001"`);
+          expect(result).toMatchInlineSnapshot(`"crworkloadprodeastus001"`);
       });
 
       it('invalid', () => {
