@@ -321,7 +321,8 @@ export const resources :
         minLength: 5,
         maxLength: 50,
         regex: /^[a-zA-Z0-9]*$/, // https://learn.microsoft.com/en-us/rest/api/containerregistry/registries/create?tabs=HTTP#uri-parameters
-        description: 'Alphanumerics'
+        description: 'Alphanumerics',
+        pattern: '{resource}{workload}{environment}{region}{instance}'
       },
       {
         // https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules#microsoftcontainerinstance
