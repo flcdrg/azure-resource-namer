@@ -37,7 +37,7 @@ export const resources :
         name: 'Policy definition',
         minLength: 1,
         maxLength: 64,
-        description: 'Resource name can\'t use: <>*%&:\?.+/ or control characters. Can\'t end with period or space.'
+        description: 'Resource name can\'t use: <>*%&:?.+/ or control characters. Can\'t end with period or space.'
       },
       {
         abbrev: 'rg',
@@ -45,7 +45,7 @@ export const resources :
         minLength: 1,
         maxLength: 90,
         // https://docs.microsoft.com/en-us/rest/api/resources/resource-groups/create-or-update#uri-parameters
-        regex: /^[-\w\._\(\)]+$/,
+        regex: /^[-\w._()]+$/,
         description: 'Alphanumerics, underscores, parentheses, hyphens, periods, and unicode characters that match the regex documentation. Can\'t end with period.'
       },
     ]
@@ -164,6 +164,14 @@ export const resources :
       {
         abbrev: 'se',
         name: 'Service endpoint'
+      },
+      {
+        abbrev: 'subnet',
+        name: 'Subnet',
+        minLength: 1,
+        maxLength: 80,
+        description: 'Alphanumerics, underscores, periods, and hyphens. Start with alphanumeric. End alphanumeric or underscore.',
+        regex: /^[a-zA-Z]$|^[a-zA-Z0-9][a-zA-Z0-9-_.]{0,78}[a-zA-Z0-9_]$/
       },
       {
         abbrev: 'traf',
