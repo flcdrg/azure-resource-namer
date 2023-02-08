@@ -2300,7 +2300,7 @@ aurelia-templating-router@^1.5.0:
     aurelia-path "^1.1.7"
     aurelia-templating "^1.11.1"
 
-aurelia-templating@^1.0.0, aurelia-templating@^1.11.1, aurelia-templating@^1.9.0:
+aurelia-templating@^1.0.0, aurelia-templating@^1.11.1:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/aurelia-templating/-/aurelia-templating-1.11.1.tgz#661df6d9ff09ec280ccf0fc4a94b702fceff0b24"
   integrity sha512-7Zrb/yvnIYBIlqGaLXIiBsmWMoFwo3SSoxyoucqWe/M80YpR4LJaTEKoZxhZZI6x9pU+tlFOBkwd/sA1JqPR8w==
@@ -2325,17 +2325,17 @@ aurelia-testing@^1.1.0:
     aurelia-pal "^1.0.0"
     aurelia-templating "^1.11.1"
 
-aurelia-validation@^2.0.0-rc2:
-  version "2.0.0-rc2"
-  resolved "https://registry.yarnpkg.com/aurelia-validation/-/aurelia-validation-2.0.0-rc2.tgz#2a47fedfc28e9de9701f1d768b295917398583ed"
-  integrity sha512-aG14qfIt6kMWhlinfsyxvQfRWGJFWdL4BslhUe0BaNlvQI6yP9uZq8D91MtdeTz9PeM7Q9gRTU1gocSDy2drmA==
+aurelia-validation@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/aurelia-validation/-/aurelia-validation-2.0.0.tgz#ee70a1451c6f439659baee3995726053ea6513b9"
+  integrity sha512-acPlbhLX2Hdq5EyE5ze/mOy8jSn+NwzcIWiYgEbxTF1HDZ7Dv5ZMXJhjJ4xGMTicy7rOaF4XIyL0bXHzrKDD3A==
   dependencies:
     aurelia-binding "^2.5.2"
     aurelia-dependency-injection "^1.5.0"
     aurelia-logging "^1.5.0"
     aurelia-pal "^1.8.0"
     aurelia-task-queue "^1.3.1"
-    aurelia-templating "^1.9.0"
+    aurelia-templating "^1.11.1"
 
 aurelia-webpack-plugin@^4.0.0:
   version "4.0.0"
