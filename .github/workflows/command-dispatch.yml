@@ -16,7 +16,7 @@ jobs:
           permission: write
           issue-type: pull-request
 
-      - uses: xt0rted/pull-request-comment-branch@v1
+      - uses: xt0rted/pull-request-comment-branch@v2
         id: comment-branch
 
       - name: Slash Command Workflow Dispatch
