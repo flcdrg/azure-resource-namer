@@ -1165,10 +1165,10 @@
   resolved "https://registry.yarnpkg.com/@types/find-cache-dir/-/find-cache-dir-3.2.1.tgz#7b959a4b9643a1e6a1a5fe49032693cc36773501"
   integrity sha512-frsJrz2t/CeGifcu/6uRo4b+SzAwT4NYCVPu1GN8IB9XTzrpPkGuV0tmh9mN+/L0PklAlsC3u5Fxt0ju00LXIw==
 
-"@types/format-unicorn@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@types/format-unicorn/-/format-unicorn-1.1.2.tgz#af65af7747a5cf862471b532c4d6d52b7c0c43be"
-  integrity sha512-RjsAjUsSu0J1OPjRnYXhN2g6zdP1mxgCZff0ZaKVjixuN92d7K7HBqXj+lTy+aUs28puGgRNFB1rme1uXTH3ew==
+"@types/format-unicorn@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@types/format-unicorn/-/format-unicorn-1.1.3.tgz#aabbdb382f21334a4f4454051f1b3d7fd7c24884"
+  integrity sha512-kRtb2AMFtxYfzRyd4jUCAMv9Ezs2stApvImrF6/EQtCBfM/zSr712d+NPqaKSXnAWrEVUGvBSszAX4BxEDEuQQ==
 
 "@types/fs-extra@^11.0.1":
   version "11.0.1"
