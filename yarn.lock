@@ -2367,10 +2367,10 @@ aurelia-templating-binding@^1.6.0:
     aurelia-logging "^1.0.0"
     aurelia-templating "^1.11.1"
 
-aurelia-templating-resources@^1.14.1, aurelia-templating-resources@^1.15.0, aurelia-templating-resources@^1.7.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/aurelia-templating-resources/-/aurelia-templating-resources-1.15.0.tgz#0755219845f527f939334b8ee8116d57b1290c67"
-  integrity sha512-jGp9YR7seIN6Ne2TbCjayIA+ZIF1d6Zed3axSn3MomcbuBqot77LMM4nE8t34Al68zozOu1pKGhlm+WqiU1gEQ==
+aurelia-templating-resources@^1.14.1, aurelia-templating-resources@^1.15.1, aurelia-templating-resources@^1.7.0:
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/aurelia-templating-resources/-/aurelia-templating-resources-1.15.1.tgz#7544c326ee1e9f301b9808b343e1e96ce155de68"
+  integrity sha512-lmgP1LrXOSMxlxxb/L/RoxYVAOwKPMm7HKbUes6rdpbgN8VAVWn9/1OqRtlidkUvlX520MagzdcFAwnKMopBYw==
   dependencies:
     aurelia-binding "^2.0.0"
     aurelia-dependency-injection "^1.0.0"
