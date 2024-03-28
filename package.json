@@ -60,7 +60,7 @@
     "webpack": "^4.44.2",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.3",
+    "webpack-dev-server": "^5.0.4",
     "yarn-audit-fix": "^10.0.7"
   },
   "scripts": {
