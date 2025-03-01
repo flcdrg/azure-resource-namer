@@ -2,37 +2,38 @@ name: Publish
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '16.x'
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "16.x"
 
-    - name: Build
-      run: |
-        yarn
-        yarn build
+      - name: Build
+        run: |
+          yarn
+          yarn build
 
-    - name: GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v4.1.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        build_dir: dist
-        # committer: # optional
-        # author: # optional
-        # commit_message: # optional
-        # fqdn: # optional
-        jekyll: false # optional, default is true
-        #dry_run: # optional, default is false
-        #verbose: # optional, default is false    
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          build_dir: dist
+          # committer: # optional
+          # author: # optional
+          # commit_message: # optional
+          # fqdn: # optional
+          jekyll: false # optional, default is true
+          #dry_run: # optional, default is false
+          #verbose: # optional, default is false
