@@ -6,7 +6,7 @@ Naming suggestions are based on the examples from the [Cloud Adoption Framework 
 
 This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
-For more information, go to https://aurelia.io/docs/cli/webpack
+For more information, go to <https://aurelia.io/docs/cli/webpack>
 
 ## Run dev app
 
