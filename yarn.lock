@@ -2112,10 +2112,10 @@ aurelia-binding@^2.0.0, aurelia-binding@^2.5.2:
     aurelia-pal "^1.0.0"
     aurelia-task-queue "^1.0.0"
 
-aurelia-bootstrapper@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/aurelia-bootstrapper/-/aurelia-bootstrapper-2.4.0.tgz#a098ba7c9174763b3f2c7a9dbef0e67d4e4b82e0"
-  integrity sha512-BdJZiAm1cL+CalLkN2DxkqxckzvdpOv8MFXXyKDUfFPxDHMiUvtdoei//JzW+QPPeGdvhl8hMh+1IpwucAWQXw==
+aurelia-bootstrapper@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/aurelia-bootstrapper/-/aurelia-bootstrapper-2.4.1.tgz#5a9ec7a021a6b76c2f826f707512d63c4d77013e"
+  integrity sha512-GFicHy+/Sz0DmJncApJew5RcVcnpcZTqfsz5j3iobTFif9JyLCo+gIVm96aopcE29cpTne94eLxkeJ1d/Lb/mA==
   dependencies:
     aurelia-event-aggregator "^1.0.0"
     aurelia-framework "^1.4.1"
