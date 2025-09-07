@@ -21,7 +21,7 @@ export function formatResourceName(selectedResource: IResource, workload: string
     feedback.resourceNameValid = false;
 
   } else if (selectedResource.regex && !selectedResource.regex?.test(name)) {
-    feedback.validationFeedback = 'Name must only contain: ' + selectedResource.description ?? selectedResource.regex.source;
+    feedback.validationFeedback = 'Name must only contain: ' + (selectedResource.description ?? selectedResource.regex.source);
     feedback.resourceNameValid = false;
 
   } else {
