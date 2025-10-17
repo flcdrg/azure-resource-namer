@@ -30,7 +30,7 @@
     "aurelia-loader-nodejs": "^1.1.0",
     "aurelia-pal-nodejs": "^2.0.0",
     "aurelia-testing": "^1.1.0",
-    "aurelia-webpack-plugin": "^4.0.0",
+    "aurelia-webpack-plugin": "^5.0.6",
     "babel-eslint": "^10.1.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^6.4.0",
