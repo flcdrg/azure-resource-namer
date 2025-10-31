@@ -40,10 +40,6 @@ export class MyApp implements IFeedback {
     return formatResourceName(this.selectedResource, this.workload, this.environment, this.region, this.instance, this);
   }
 
-  propertyChanged(key, newValue: any, oldValue: any): void {
-    console.log(`Property ${key} changed from ${oldValue} to ${newValue}`);
-  }
-
   copyToClipboard(): void {
     navigator.clipboard.writeText(this.resourceName).then(_ => {
       this.copied = true;

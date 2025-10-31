@@ -1,6 +1,6 @@
-import { IFeedback } from "formatting";
+import { IFeedback } from "../../../src/formatting";
 
 export class MockFeedback implements IFeedback {
-  validationFeedback: string;
-  resourceNameValid: boolean;
+  validationFeedback!: string;
+  resourceNameValid!: boolean;
 }
