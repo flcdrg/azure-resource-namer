@@ -109,28 +109,15 @@ module.exports = (env, { mode }) => {
           issuer: /\.html$/i,
           use: cssRules
         },
-        { 
-          test: /\.html$/i, 
-          use: [
-            {
-              loader: '@aurelia/webpack-loader'
-            },
-            {
-              loader: 'html-loader',
-              options: {
-                esModule: false
-              }
-            }
-          ]
+        {
+          test: /\.html$/i,
+          exclude: /node_modules/,
+          loader: 'raw-loader'
         },
         { 
           test: /\.ts$/,
-          use: [
-            {
-              loader: 'ts-loader'
-            }
-          ],
-          exclude: /node_modules/
+          exclude: /node_modules/,
+          loader: 'ts-loader'
         },
         { test: /\.(png|gif|jpg|cur)$/i, type: 'asset' },
         { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/i, type: 'asset' },

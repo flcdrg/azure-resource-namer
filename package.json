@@ -36,6 +36,7 @@
     "mini-css-extract-plugin": "^2.9.1",
     "minimatch": "^10.0.3",
     "promise-polyfill": "^8.3.0",
+    "raw-loader": "^4.0.2",
     "style-loader": "^4.0.0",
     "tree-kill": "^1.2.2",
     "ts-jest": "^28.0.8",
