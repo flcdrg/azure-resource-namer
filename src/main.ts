@@ -1,10 +1,10 @@
 import Aurelia, { CustomElement } from 'aurelia';
 import { App } from './app';
 import * as environment from '../config/environment.json';
-import testTemplate from './test.html';
+import appTemplate from './app-simple.html';
 
-// Define App element with simple test template
-const AppElement = CustomElement.define({ name: 'app', template: testTemplate }, App);
+// Define App element with simplified template
+const AppElement = CustomElement.define({ name: 'app', template: appTemplate }, App);
 
 // Use the declarative API
 Aurelia
