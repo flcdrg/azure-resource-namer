@@ -1,4 +1,3 @@
-import { bindable, bindingMode } from 'aurelia-framework';
 import { resources } from 'resources';
 
 export interface IResource {
@@ -13,7 +12,7 @@ export interface IResource {
 
 export class ResourcetypeList {
 
-  @bindable({ defaultBindingMode: bindingMode.twoWay }) resource: IResource;
+  resource: IResource;
 
   selectedTheme: any;
   resources: {

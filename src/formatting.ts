@@ -1,5 +1,5 @@
 import { IResource } from "resourcetype-list";
-require('format-unicorn');
+import 'format-unicorn';
 
 export interface IFeedback {
   validationFeedback: string;
@@ -12,7 +12,7 @@ export function formatResourceName(selectedResource: IResource, workload: string
 
   const instanceString = instance > 0 ? String(instance).padStart(3, '0') : '';
 
-  const name = pattern.formatUnicorn({ resource: selectedResource.abbrev, workload: workload, environment: environment, region: region, instance: instanceString })
+  const name = (pattern as any).formatUnicorn({ resource: selectedResource.abbrev, workload: workload, environment: environment, region: region, instance: instanceString })
     .replace(/\-+/g, '-') // Remove double dashes (from an empty field)
     .replace(/\-+$/, ''); // Remove trailing dash(es)
 
@@ -25,6 +25,7 @@ export function formatResourceName(selectedResource: IResource, workload: string
     feedback.resourceNameValid = false;
 
   } else {
+    feedback.validationFeedback = '';
     feedback.resourceNameValid = true;
   }
   return name;
