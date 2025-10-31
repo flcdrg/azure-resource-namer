@@ -1,10 +1,10 @@
 import { resources } from './resources';
 import { IResource } from './iresource';
-import { bindable } from 'aurelia';
+import { bindable, BindingMode } from 'aurelia';
 
 export class ResourcetypeList {
 
-  @bindable resource: IResource;
+  @bindable({ mode: BindingMode.twoWay }) resource: IResource;
 
   selectedTheme: any;
   resources: {

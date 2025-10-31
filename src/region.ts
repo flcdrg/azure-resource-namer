@@ -1,3 +1,5 @@
+import { bindable } from 'aurelia';
+
 export class region {
-  name;
+  @bindable name: string;
 }

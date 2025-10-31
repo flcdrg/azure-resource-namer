@@ -1,14 +1,13 @@
 import { IResource } from './iresource';
 import { formatResourceName, IFeedback } from './formatting';
 import { resources } from './resources';
-import { bindable } from 'aurelia';
 
 export class MyApp implements IFeedback {
   thingy: string;
   lastName: string;
   instance: number;
   environment: string;
-  @bindable region: string;
+  region: string;
   selectedResource: IResource;
   message: string;
   workload: string;
@@ -28,7 +27,11 @@ export class MyApp implements IFeedback {
     this.message = "msg";
     this.region = 'westus';
     this.resources = resources;
-    this.selectedResource = { abbrev: 'rg', name: ''};
+    // Initialize to a real resource entry so validation (maxLength/regex) works immediately
+    this.selectedResource = this.resources
+      ?.find(c => c.category === 'General')
+      ?.assets.find(a => a.abbrev === 'rg')
+      ?? { abbrev: 'rg', name: 'Resource group' } as IResource;
     this.thingy = 'ah';
     this.resourceNameValid = true;
   }

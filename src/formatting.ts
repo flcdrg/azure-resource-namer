@@ -19,6 +19,7 @@ export function formatResourceName(selectedResource: IResource, workload: string
   if (name.length > selectedResource?.maxLength) {
     feedback.validationFeedback = `Length exceeds maximum ${selectedResource.maxLength} characters`;
     feedback.resourceNameValid = false;
+    console.log('Invalid length');
 
   } else if (selectedResource.regex && !selectedResource.regex?.test(name)) {
     feedback.validationFeedback = 'Name must only contain: ' + (selectedResource.description ?? selectedResource.regex.source);
