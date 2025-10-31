@@ -1,5 +1,5 @@
 import { resources } from '../../../src/resources';
-import { formatResourceName } from "formatting";
+import { formatResourceName } from "../../../src/formatting";
 import { MockFeedback } from './MockFeedback';
 
 describe('formatting', () => {
@@ -12,7 +12,7 @@ describe('formatting', () => {
     });
 
     describe('apim', () => {
-      const resource = resources.find(f => f.category == 'General').assets.find(a => a.abbrev === 'apim');
+      const resource = resources.find(f => f.category == 'General')!.assets.find(a => a.abbrev === 'apim')!;
 
       it('valid', () => {
         const result = formatResourceName(
@@ -40,7 +40,7 @@ describe('formatting', () => {
     });
 
     describe('id', () => {
-      const resource = resources.find(f => f.category == 'General').assets.find(a => a.abbrev === 'id');
+      const resource = resources.find(f => f.category == 'General')!.assets.find(a => a.abbrev === 'id')!;
 
       it('valid', () => {
         const result = formatResourceName(
@@ -68,7 +68,7 @@ describe('formatting', () => {
     });
 
     describe('rg', () => {
-      const resource = resources.find(f => f.category == 'General').assets.find(a => a.abbrev === 'rg');
+      const resource = resources.find(f => f.category == 'General')!.assets.find(a => a.abbrev === 'rg')!;
 
       it('valid', () => {
         const result = formatResourceName(

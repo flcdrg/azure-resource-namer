@@ -1,5 +1,5 @@
 import { resources } from '../../../src/resources';
-import { formatResourceName } from "formatting";
+import { formatResourceName } from "../../../src/formatting";
 import { MockFeedback } from './MockFeedback';
 
 describe('formatting', () => {
@@ -12,7 +12,7 @@ describe('formatting', () => {
     });
 
     describe('empty fields', () => {
-      const resource = resources.find(f => f.category == 'General').assets.find(a => a.abbrev === 'apim');
+      const resource = resources.find(f => f.category == 'General')!.assets.find(a => a.abbrev === 'apim')!;
 
       it('empty environment', () => {
         const result = formatResourceName(

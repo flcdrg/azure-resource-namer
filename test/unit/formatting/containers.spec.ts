@@ -1,5 +1,5 @@
 import { resources } from '../../../src/resources';
-import { formatResourceName } from "formatting";
+import { formatResourceName } from "../../../src/formatting";
 import { MockFeedback } from './MockFeedback';
 
 describe('formatting', () => {
@@ -12,7 +12,7 @@ describe('formatting', () => {
     });
 
     describe('cr', () => {
-      const resource = resources.find(f => f.category == 'Containers').assets.find(a => a.abbrev === 'cr');
+      const resource = resources.find(f => f.category === 'Containers')!.assets.find(a => a.abbrev === 'cr')!;
 
       it('valid', () => {
         const result = formatResourceName(

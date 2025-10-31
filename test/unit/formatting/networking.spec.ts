@@ -1,5 +1,5 @@
 import { resources } from '../../../src/resources';
-import { formatResourceName } from "formatting";
+import { formatResourceName } from "../../../src/formatting";
 import { MockFeedback } from './MockFeedback';
 
 describe('formatting', () => {
@@ -12,7 +12,7 @@ describe('formatting', () => {
     });
 
     describe('subnet', () => {
-      const resource = resources.find(f => f.category == 'Networking').assets.find(a => a.abbrev === 'subnet');
+      const resource = resources.find(f => f.category == 'Networking')!.assets.find(a => a.abbrev === 'subnet')!;
 
       it('valid', () => {
         const result = formatResourceName(
@@ -52,7 +52,7 @@ describe('formatting', () => {
     });
 
     describe('stc', () => {
-      const resource = resources.find(f => f.category == 'Storage').assets.find(a => a.abbrev === 'stc');
+      const resource = resources.find(f => f.category == 'Storage')!.assets.find(a => a.abbrev === 'stc')!;
 
       it('valid', () => {
         const result = formatResourceName(

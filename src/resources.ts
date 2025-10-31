@@ -1,4 +1,4 @@
-import { IResource } from 'resourcetype-list';
+import { IResource } from './iresource';
 // REST API docs contain most info about min/max length and regexes - https://docs.microsoft.com/en-us/rest/api/azure/
 // Resource naming restrictions - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules 
 

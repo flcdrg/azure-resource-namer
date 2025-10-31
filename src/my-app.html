@@ -1,10 +1,7 @@
-<template>
+
   <import from="bootstrap/dist/css/bootstrap.css"></import>
   <import from="./resourcetype-list"></import>
-  <import from="./workload"></import>
   <import from="./region"></import>
-  <import from="./app.css"></import>
-  <import from="./setvalid"></import>
 
   <div class="container">
 
@@ -17,11 +14,14 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <resourcetype-list resource.two-way="selectedResource"></resourcetype-list>
+            <resourcetype-list resource.bind="selectedResource"></resourcetype-list>
           </div>
 
           <div class="col">
-            <workload message.two-way="workload"></workload>
+
+              <label for="workload" class="form-label">Workload</label>
+              <input class="form-control" id="workload" type="text" value.bind="workload" title="Name of the application, workload, or service that the resource is a part of" />
+
           </div>
 
           <div class="col">
@@ -45,20 +45,21 @@
 
       <div class="container">
 
-        <div class="input-group mb-3">
-          <input id="resourceName" type="text" class="form-control has-validation" value.one-way="resourceName"
+        <div class="input-group has-validation mb-3">
+          <input id="resourceName" type="text" class="form-control" value.bind="resourceName"
             aria-multiline="false" readonly="" spellcheck="false" tabindex="-1" aria-readonly="true"
-            title="resource name" set-valid.bind="resourceNameValid" required>
+            title="resource name" aria-describedby="validationServer03Feedback" required
+            class.bind="{ 'is-valid': resourceNameValid, 'is-invalid': !resourceNameValid }">
           <span class="input-group-text copyTooltip" id="basic-addon2">
-            <button type="button" class="btn-clipboard" title="Copy to clipboard" click.trigger="copyToClipboard()">
-              <font-awesome-icon icon.bind="copyIcon"></font-awesome-icon>
-              <span show.bind="copied" class="copyTooltiptext">Copied <font-awesome-icon icon.bind="copiedIcon">
-                </font-awesome-icon></span>
+            <button type="button" class="btn-clipboard" title="Copy to clipboard" aria-label="Copy to clipboard" click.trigger="copyToClipboard()">
+              📋
+              <span show.bind="copied" class="copyTooltiptext">Copied ✓</span>
             </button>
           </span>
           <!-- aria-describedby="validationServer03Feedback" -->
-          <div id="validationServer03Feedback" class="invalid-feedback"
-            innerhtml.bind="validationFeedback | sanitizeHTML"></div>
+          <div id="validationServer03Feedback" class="invalid-feedback" role="alert"
+            show.bind="!resourceNameValid"
+            textcontent.bind="validationFeedback"></div>
         </div>
       </div>
 
@@ -68,5 +69,3 @@
       Source at <a href="https://github.com/flcdrg/azure-resource-namer">https://github.com/flcdrg/azure-resource-namer</a>
     </footer>
   </div>
-
-</template>

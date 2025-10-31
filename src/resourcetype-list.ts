@@ -1,18 +1,10 @@
-import { resources } from 'resources';
-
-export interface IResource {
-  abbrev: string;
-  name: string;
-  pattern?: string;
-  minLength?: number;
-  maxLength?: number;
-  regex?: RegExp;
-  description?: string;
-}
+import { resources } from './resources';
+import { IResource } from './iresource';
+import { bindable, BindingMode } from 'aurelia';
 
 export class ResourcetypeList {
 
-  resource: IResource;
+  @bindable({ mode: BindingMode.twoWay }) resource: IResource;
 
   selectedTheme: any;
   resources: {
@@ -20,7 +12,7 @@ export class ResourcetypeList {
     assets: IResource[]
   }[];
 
-  resourceMatcher = (a: IResource, b: IResource) => a.abbrev === b.abbrev;
+  resourceMatcher = (a: IResource, b: IResource) => a && b && a.abbrev === b.abbrev;
 
   constructor() {
     this.resources = resources;
