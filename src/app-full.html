@@ -1,0 +1,126 @@
+<template>
+  <div class="container">
+    <h1>Azure Resource Namer</h1>
+    
+    <p>A simple tool to help you name your Azure resources, based on the <a href="https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming">Cloud Adoption Framework naming convention</a>.</p>
+    
+    <form class="needs-validation">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <label for="resourceType" class="form-label">Resource type</label>
+            <select id="resourceType" value.bind="selectedResource" class="form-control" title="An abbreviation that represents the type of Azure resource or asset">
+              <optgroup repeat.for="category of resources" label.bind="category.category">
+                <option repeat.for="resource of category.assets" value.bind="resource" model.bind="resource">
+                  ${resource.name}
+                </option>
+              </optgroup>
+            </select>
+          </div>
+          
+          <div class="col">
+            <label for="workload" class="form-label">Workload</label>
+            <input class="form-control" id="workload" type="text" value.bind="workload" title="Name of the application, workload, or service that the resource is a part of" />
+          </div>
+          
+          <div class="col">
+            <label for="environment" class="form-label">Environment</label>
+            <input class="form-control" type="text" id="environment" value.bind="environment" title="The stage of the development lifecycle for the workload that the resource supports" />
+          </div>
+          
+          <div class="col">
+            <label for="region" class="form-label">Region</label>
+            <select class="form-control" id="region" value.bind="region" title="The Azure region where the resource is deployed">
+              <optgroup label="Africa">
+                <option value="southafricanorth" title="Johannesburg">South Africa North</option>
+                <option value="southafricawest" title="Cape Town">South Africa West</option>
+              </optgroup>
+              <optgroup label="Asia Pacific">
+                <option value="australiacentral" title="Canberra">Australia Central</option>
+                <option value="australiacentral2" title="Canberra">Australia Central 2</option>
+                <option value="australiaeast" title="New South Wales">Australia East</option>
+                <option value="australiasoutheast" title="Victoria">Australia Southeast</option>
+                <option value="centralindia" title="Pune">Central India</option>
+                <option value="eastasia" title="Hong Kong">East Asia</option>
+                <option value="japaneast" title="Tokyo, Saitama">Japan East</option>
+                <option value="japanwest" title="Osaka">Japan West</option>
+                <option value="jioindiacentral" title="Nagpur">Jio India Central</option>
+                <option value="jioindiawest" title="Jamnagar">Jio India West</option>
+                <option value="koreacentral" title="Seoul">Korea Central</option>
+                <option value="koreasouth" title="Busan">Korea South</option>
+                <option value="southeastasia" title="Singapore">Southeast Asia</option>
+                <option value="southindia" title="Chennai">South India</option>
+                <option value="westindia" title="Mumbai">West India</option>
+              </optgroup>
+              <optgroup label="Canada">
+                <option value="canadacentral" title="Toronto">Canada Central</option>
+                <option value="canadaeast" title="Quebec">Canada East</option>
+              </optgroup>
+              <optgroup label="Europe">
+                <option value="francecentral" title="Paris">France Central</option>
+                <option value="francesouth" title="Marseille">France South</option>
+                <option value="germanynorth" title="Berlin">Germany North</option>
+                <option value="germanywestcentral" title="Frankfurt">Germany West Central</option>
+                <option value="northeurope" title="Ireland">North Europe</option>
+                <option value="norwayeast" title="Norway">Norway East</option>
+                <option value="norwaywest" title="Norway">Norway West</option>
+                <option value="swedencentral" title="Gävle">Sweden Central</option>
+                <option value="switzerlandnorth" title="Zurich">Switzerland North</option>
+                <option value="switzerlandwest" title="Geneva">Switzerland West</option>
+                <option value="uksouth" title="London">UK South</option>
+                <option value="ukwest" title="Cardiff">UK West</option>
+                <option value="westeurope" title="Netherlands">West Europe</option>
+              </optgroup>
+              <optgroup label="Middle East">
+                <option value="uaecentral" title="Abu Dhabi">UAE Central</option>
+                <option value="uaenorth" title="Dubai">UAE North</option>
+              </optgroup>
+              <optgroup label="South America">
+                <option value="brazilsouth" title="Sao Paulo State">Brazil South</option>
+                <option value="brazilsoutheast" title="Rio">Brazil Southeast</option>
+              </optgroup>
+              <optgroup label="US">
+                <option value="centralus" title="Iowa">Central US</option>
+                <option value="centraluseuap" title="">Central US EUAP</option>
+                <option value="eastus" title="Virginia">East US</option>
+                <option value="eastus2" title="Virginia">East US 2</option>
+                <option value="eastus2euap" title="">East US 2 EUAP</option>
+                <option value="northcentralus" title="Illinois">North Central US</option>
+                <option value="southcentralus" title="Texas">South Central US</option>
+                <option value="westcentralus" title="Wyoming">West Central US</option>
+                <option value="westus" title="California">West US</option>
+                <option value="westus2" title="Washington">West US 2</option>
+                <option value="westus3" title="Phoenix">West US 3</option>
+              </optgroup>
+            </select>
+          </div>
+          
+          <div class="col">
+            <label for="instance" class="form-label">Instance</label>
+            <input class="form-control" type="number" id="instance" value.bind="instance" min="0" />
+          </div>
+        </div>
+      </div>
+      
+      <h2>Resource name</h2>
+      
+      <div class="container">
+        <div class="input-group mb-3">
+          <input id="resourceName" type="text" class="form-control has-validation" value.bind="resourceName" 
+            aria-multiline="false" readonly="" spellcheck="false" tabindex="-1" aria-readonly="true" 
+            title="resource name" required>
+          <span class="input-group-text copyTooltip" id="basic-addon2">
+            <button type="button" class="btn-clipboard" title="Copy to clipboard" click.trigger="copyToClipboard()">
+              📋
+              <span show.bind="copied" class="copyTooltiptext">Copied ✓</span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+    
+    <footer>
+      Source at <a href="https://github.com/flcdrg/azure-resource-namer">https://github.com/flcdrg/azure-resource-namer</a>
+    </footer>
+  </div>
+</template>

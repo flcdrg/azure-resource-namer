@@ -1,7 +1,6 @@
-import { Workload } from './workload';
 import { IResource } from 'resourcetype-list';
 import { formatResourceName, IFeedback } from 'formatting';
-import { faCopy, faCheckSquare, IconDefinition } from "@fortawesome/free-regular-svg-icons";
+import { resources } from 'resources';
 
 export class App implements IFeedback {
   thingy: string;
@@ -15,19 +14,19 @@ export class App implements IFeedback {
   copied: boolean;
   resourceNameValid: boolean;
   validationFeedback: string;
-
-  copyIcon: IconDefinition;
-  copiedIcon: IconDefinition;
+  resources: {
+    category: string;
+    assets: IResource[]
+  }[];
 
   constructor() {
-    this.copyIcon = faCopy;
-    this.copiedIcon = faCheckSquare;
     this.copied = false;
     this.instance = 1;
     this.environment = "prod";
     this.workload = "myapp";
     this.message = "msg";
     this.region = 'westus';
+    this.resources = resources;
     this.selectedResource = { abbrev: 'rg', name: ''};
     this.thingy = 'ah';
     this.resourceNameValid = true;
