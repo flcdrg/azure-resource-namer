@@ -106,7 +106,7 @@
       
       <div class="container">
         <div class="input-group mb-3">
-          <input id="resourceName" type="text" class="form-control has-validation" value.bind="resourceName" 
+          <input id="resourceName" type="text" class.bind="resourceNameValid ? 'form-control is-valid' : 'form-control is-invalid'" value.bind="resourceName" 
             aria-multiline="false" readonly="" spellcheck="false" tabindex="-1" aria-readonly="true" 
             title="resource name" required>
           <span class="input-group-text copyTooltip" id="basic-addon2">
@@ -115,6 +115,7 @@
               <span show.bind="copied" class="copyTooltiptext">Copied ✓</span>
             </button>
           </span>
+          <div id="validationServer03Feedback" class="invalid-feedback" innerhtml.bind="validationFeedback"></div>
         </div>
       </div>
     </form>

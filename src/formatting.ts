@@ -25,6 +25,7 @@ export function formatResourceName(selectedResource: IResource, workload: string
     feedback.resourceNameValid = false;
 
   } else {
+    feedback.validationFeedback = '';
     feedback.resourceNameValid = true;
   }
   return name;
