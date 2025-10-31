@@ -1,5 +1,2 @@
-import {FrameworkConfiguration} from 'aurelia-framework';
-
-export function configure(config: FrameworkConfiguration): void {
-  //config.globalResources([]);
-}
+// This file can be left empty or removed in Aurelia v2
+// Resources are automatically registered when imported

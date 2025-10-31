@@ -1,12 +1,8 @@
 import { Workload } from './workload';
-import {computedFrom, inject} from 'aurelia-framework';
-import {NewInstance} from 'aurelia-dependency-injection';
-import { faCopy, faCheckSquare, IconDefinition } from "@fortawesome/free-regular-svg-icons";
 import { IResource } from 'resourcetype-list';
-import { ValidationController } from 'aurelia-validation';
 import { formatResourceName, IFeedback } from 'formatting';
+import { faCopy, faCheckSquare, IconDefinition } from "@fortawesome/free-regular-svg-icons";
 
-@inject(NewInstance.of(ValidationController))
 export class App implements IFeedback {
   thingy: string;
   lastName: string;
@@ -37,7 +33,6 @@ export class App implements IFeedback {
     this.resourceNameValid = true;
   }
 
-  @computedFrom('selectedResource', 'environment', 'region', 'workload', 'instance')
   get resourceName(): string {
     return formatResourceName(this.selectedResource, this.workload, this.environment, this.region, this.instance, this);
   }

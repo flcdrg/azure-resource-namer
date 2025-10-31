@@ -1,10 +1,7 @@
-import {autoinject} from 'aurelia-framework';
-  
-@autoinject
 export class SetValidCustomAttribute {
   value: boolean;
   
-  constructor(private element: Element){
+  constructor(private readonly element: HTMLElement){
   }
 
   valueChanged(newValue: boolean, oldValue: boolean): void {
@@ -12,11 +9,11 @@ export class SetValidCustomAttribute {
 
     if (newValue) {
       element.classList.remove('is-invalid');
-      element.classList.add('is-valid'); //
+      element.classList.add('is-valid');
 
     } else {
       element.classList.remove('is-valid');
-      element.classList.add('is-invalid'); //
+      element.classList.add('is-invalid');
     }
 
     element.reportValidity();

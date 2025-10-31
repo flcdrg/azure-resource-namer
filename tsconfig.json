@@ -5,23 +5,30 @@
     "typeRoots": [
       "./node_modules/@types"
     ],
+    "types": [],
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "useDefineForClassFields": false,
     "sourceMap": true,
-    "target": "es5",
+    "target": "es2015",
     "lib": [
-      "es2015",
+      "es2017",
       "dom"
     ],
     "moduleResolution": "node",
     "baseUrl": "src",
     "resolveJsonModule": true,
-    "allowJs": true
+    "allowJs": true,
+    "esModuleInterop": true
   },
   "include": [
-    "src",
-    "test"
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist"
   ],
   "atom": {
     "rewriteTsconfig": false
