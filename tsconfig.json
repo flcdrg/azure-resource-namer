@@ -5,7 +5,6 @@
     "typeRoots": [
       "./node_modules/@types"
     ],
-    "types": [],
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -23,11 +22,11 @@
     "esModuleInterop": true
   },
   "include": [
-    "src"
+    "src",
+    "test"
   ],
   "exclude": [
     "node_modules",
-    "test",
     "dist"
   ],
   "atom": {

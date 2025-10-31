@@ -1,6 +1,2 @@
-import 'aurelia-polyfills';
-import {Options} from 'aurelia-loader-nodejs';
-import {globalize} from 'aurelia-pal-nodejs';
-import * as path from 'path';
-Options.relativeToDir = path.join(__dirname, 'unit');
-globalize();
+// Jest setup for Aurelia v2
+// The tests are for pure TypeScript functions and don't require Aurelia-specific setup
