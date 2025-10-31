@@ -20,9 +20,9 @@ These notes give AI coding agents the minimum context to work productively in th
 - Module resolution: `tsconfig.json` sets `baseUrl: "src"`, so imports like `import { formatResourceName } from 'formatting'` resolve to `src/formatting.ts`.
 
 ## Developer workflows
-- Run dev: `yarn start` then open http://localhost:8080 (dev server + HMR).
-- Build prod: `yarn build` (outputs to `dist/`). Optional bundle analyzer: `yarn analyze`.
-- Tests: `yarn test` runs Jest with ts‑jest. Coverage goes to `test/coverage-jest/`. Tests live under `test/unit/formatting/`.
+- Run dev: `pnpm start` then open http://localhost:9000 (dev server + HMR).
+- Build prod: `pnpm build` (outputs to `dist/`).
+- Tests: `pnpm test` runs Jest with ts‑jest. Coverage goes to `test/coverage-jest/`. Tests live under `test/unit/formatting/`.
   - Inline snapshot expectations are used; if formatting rules change, update snapshots accordingly.
 
 ## Project conventions and pitfalls
@@ -65,11 +65,11 @@ These notes give AI coding agents the minimum context to work productively in th
   - Pick the correct category in `src/resources.ts` and ensure `abbrev` is unique across all assets (selection logic matches by exact `abbrev`).
   - Provide `maxLength`, `regex`, and a short `description` sourced from Azure docs; set a custom `pattern` if the service disallows hyphens (e.g., storage, container registry).
   - Add tests under `test/unit/formatting/`: include a happy path (valid) and at least one invalid case using `MockFeedback`. Update inline snapshots if behavior changes.
-  - Quick manual check: `yarn start`, pick the resource, try example inputs, confirm validation messages when invalid.
+  - Quick manual check: `pnpm start`, pick the resource, try example inputs, confirm validation messages when invalid.
 
 - Changing global formatting rules (`src/formatting.ts`)
   - Preserve the contract: default pattern, 3‑digit zero‑padded instance (omit when 0), collapse duplicate dashes, trim trailing dashes.
   - Consider edge cases: empty workload/environment, instance=0, max length boundary, regex enforcement, custom patterns.
-  - Update affected specs and refresh snapshots; ensure `yarn test` passes and `yarn build` succeeds.
+  - Update affected specs and refresh snapshots; ensure `pnpm test` passes and `pnpm build` succeeds.
 
 If any of the above feels incomplete (e.g., missing workflows or a convention you rely on), tell us and we’ll refine this guide.
