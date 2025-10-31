@@ -19,10 +19,12 @@ jobs:
         with:
           node-version: "22.x"
 
+      - uses: pnpm/action-setup@v4
+
       - name: Build
         run: |
-          yarn
-          yarn build -- --base=/azure-resource-namer/
+          pnpm install
+          pnpm build -- --base=/azure-resource-namer/
 
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.2.0

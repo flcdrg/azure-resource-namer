@@ -16,10 +16,12 @@ jobs:
       with:
         node-version: '22.x'
 
+    - uses: pnpm/action-setup@v4
+
     - name: Build
       run: |
-        yarn
-        yarn build
+        pnpm install
+        pnpm build
         
     - name: Test
-      run: yarn jest
+      run: pnpm test
