@@ -1,13 +1,14 @@
-import { IResource } from 'resourcetype-list';
-import { formatResourceName, IFeedback } from 'formatting';
-import { resources } from 'resources';
+import { IResource } from './iresource';
+import { formatResourceName, IFeedback } from './formatting';
+import { resources } from './resources';
+import { bindable } from 'aurelia';
 
-export class App implements IFeedback {
+export class MyApp implements IFeedback {
   thingy: string;
   lastName: string;
   instance: number;
   environment: string;
-  region: string;
+  @bindable region: string;
   selectedResource: IResource;
   message: string;
   workload: string;
@@ -34,6 +35,10 @@ export class App implements IFeedback {
 
   get resourceName(): string {
     return formatResourceName(this.selectedResource, this.workload, this.environment, this.region, this.instance, this);
+  }
+
+  propertyChanged(key, newValue: any, oldValue: any): void {
+    console.log(`Property ${key} changed from ${oldValue} to ${newValue}`);
   }
 
   copyToClipboard(): void {

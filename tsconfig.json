@@ -1,35 +1,19 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
     "module": "esnext",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-    "sourceMap": true,
-    "target": "es2015",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
     "moduleResolution": "node",
-    "baseUrl": "src",
+    "skipLibCheck": true,
+    "target": "ES2017",
+    "esModuleInterop": true,
     "resolveJsonModule": true,
-    "allowJs": true,
-    "esModuleInterop": true
+    "importHelpers": true,
+    "sourceMap": true
   },
   "include": [
-    "src",
-    "test"
+    "src"
   ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "atom": {
-    "rewriteTsconfig": false
-  }
+  "files": [
+    "src/resource.d.ts",
+    "src/iresource.ts"
+  ]
 }

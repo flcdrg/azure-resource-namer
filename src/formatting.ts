@@ -1,4 +1,4 @@
-import { IResource } from "resourcetype-list";
+import { IResource } from "./iresource";
 import 'format-unicorn';
 
 export interface IFeedback {
