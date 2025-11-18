@@ -8,7 +8,7 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - name: Slash Command Repository Dispatch
-        uses: peter-evans/slash-command-dispatch@v4
+        uses: peter-evans/slash-command-dispatch@v5
         with:
           token: ${{ secrets.PAT_REPO_FULL }}
           commands: |
@@ -20,7 +20,7 @@ jobs:
         id: comment-branch
 
       - name: Slash Command Workflow Dispatch
-        uses: peter-evans/slash-command-dispatch@v4
+        uses: peter-evans/slash-command-dispatch@v5
         with:
           token: ${{ secrets.PAT_REPO_FULL }}
           commands: |
