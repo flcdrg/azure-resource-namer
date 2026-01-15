@@ -16,7 +16,7 @@ importers:
     dependencies:
       aurelia:
         specifier: latest
-        version: 2.0.0-beta.27
+        version: 2.0.0-rc.0
       bootstrap:
         specifier: ^5.3.7
         version: 5.3.8(@popperjs/core@2.11.8)
@@ -73,8 +73,8 @@ importers:
         specifier: ^7.3.1
         version: 7.3.1(@types/node@24.10.2)
       vite-plugin-node-polyfills:
-        specifier: ^0.24.0
-        version: 0.24.0(vite@7.3.1(@types/node@24.10.2))
+        specifier: ^0.25.0
+        version: 0.25.0(vite@7.3.1(@types/node@24.10.2))
       yarn-audit-fix:
         specifier: ^10.1.1
         version: 10.1.1
@@ -85,24 +85,44 @@ packages:
     resolution: {integrity: sha512-cQx+f4HeX9Fq4aAz+eOd6RMQJlpddq7yAEwxQHCuWTaQ7Zn117KQLP5G9f3C38jPYcgdwE3KzO6fIl/DSOKKoA==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/fetch-client@2.0.0-beta.27':
-    resolution: {integrity: sha512-5Bo3pIiAcZIXqqmwyXe1qL3YMBXnZygPZPCOZ5KBaR+tDAUH5KtZgstxOqEa79WPWKWH04YMUcdVRt5kooDsUw==}
+  '@aurelia/expression-parser@2.0.0-rc.0':
+    resolution: {integrity: sha512-gZdtSiKrFAqPMHvt7aX/pkJ+M6qWCp+fEjj/vUO+agqafCkUyZB3bteYCMQa8tO1JcKtNUMlBuk7ii/e8k5dcQ==}
+    engines: {node: '>=20.16.0'}
+
+  '@aurelia/fetch-client@2.0.0-rc.0':
+    resolution: {integrity: sha512-RjmpbEMgQNf0KA9PUTcgFEGbrmQOt8To55cucVTq44Nh/a9TOhAWGXLc+11OtVCHRqSOUWRkcAoXrOeEzrIjFA==}
     engines: {node: '>=20.16.0'}
 
   '@aurelia/kernel@2.0.0-beta.27':
     resolution: {integrity: sha512-gJNmMwtgvpdsg2GyQ9szjAMpeva4m067m5OVhxi7OGp0/VduM8dbK+NNT15QDw289DFr4ucHwBOPwKe2mLy8Cw==}
     engines: {node: '>=20.16.0'}
 
+  '@aurelia/kernel@2.0.0-rc.0':
+    resolution: {integrity: sha512-B6ntHxLxp3gjiIauLsbN8D8FcRaQbm6xBPGLJobzJTdTG4oPfpHV7mL3naUV2NpIp2qjww6WtFxQRBQH4a9zZg==}
+    engines: {node: '>=20.16.0'}
+
   '@aurelia/metadata@2.0.0-beta.27':
     resolution: {integrity: sha512-FGo24WjiawAhVCO4FzVMYUzEbDCKw7DOEBt1ZmM4/0OW7E2pW0Wd/lF29JIPHTJeuJGp32ri+nJj/6ABelei2g==}
+    engines: {node: '>=20.16.0'}
+
+  '@aurelia/metadata@2.0.0-rc.0':
+    resolution: {integrity: sha512-jSTJoXYOSz1Howtgae2W1TnqMm4IVoXo+WQpmFHuGqj4lz6iorfIsEOaodlJAdhd1r6E1soAP4uKUQsjqJttWQ==}
     engines: {node: '>=20.16.0'}
 
   '@aurelia/platform-browser@2.0.0-beta.27':
     resolution: {integrity: sha512-DZFmREPyePjopPsz40tgwcqZ6bw8hi+eTgp817nzy9FAWjmZBmeKLSCjDZtIBW3S4n0VoOgNkUCa+401alz/wg==}
     engines: {node: '>=20.16.0'}
 
+  '@aurelia/platform-browser@2.0.0-rc.0':
+    resolution: {integrity: sha512-slR2HtxAdGYySFA2uFGOv4tx9EYUZO2zbGFnlOFx0bSH13GucYGVwZMLBP2fCQNuUXKuxEOTX4qQq5fsvN/B/A==}
+    engines: {node: '>=20.16.0'}
+
   '@aurelia/platform@2.0.0-beta.27':
     resolution: {integrity: sha512-3S0i3EpSW03Iyi3qWt+TYpDDOLbI1b79/to7k2C/cPXcDoNij0rMTmwRi6IzehK86FXnCaQqb+hXt7962CYy5g==}
+    engines: {node: '>=20.16.0'}
+
+  '@aurelia/platform@2.0.0-rc.0':
+    resolution: {integrity: sha512-S5xlBVMQfFT+v0jSIbo2ASzy6wIQTyDxoSTsFNmGMqr4YDTQbHXadgdtksTnzmnQOYRsCo4GcgZrbK/KFZogxA==}
     engines: {node: '>=20.16.0'}
 
   '@aurelia/plugin-conventions@2.0.0-beta.27':
@@ -113,12 +133,24 @@ packages:
     resolution: {integrity: sha512-1LEehU2RSjssAtN89fm0sYAtTuEniqcPBuYq1YdW1lGdNFrI0g+kr2eJqJ1s/rIcp64e/LTs1SZ1wMPscc0bvw==}
     engines: {node: '>=20.16.0'}
 
+  '@aurelia/runtime-html@2.0.0-rc.0':
+    resolution: {integrity: sha512-4NV6LGOhOD3lp+V3z8IlzX3sv8JrFUoZ6VoWtQLnY5xgRUrx17yz7eRnc9Cr9YTKT7XHslgDJb4Cqta835tGHA==}
+    engines: {node: '>=20.16.0'}
+
   '@aurelia/runtime@2.0.0-beta.27':
     resolution: {integrity: sha512-7G5ZWUpdvcxV6eCK5fCeL64+0OXOeLKGnzmTXFge2NPMurIPAuf2ksDXIuZHsJDLAvsKx66Skyo2+z3VYZE4Pg==}
     engines: {node: '>=20.16.0'}
 
+  '@aurelia/runtime@2.0.0-rc.0':
+    resolution: {integrity: sha512-+z2UquldYZwDgYUUxsVbUes0w3feRU07h56ZhgW0w/MI9qCxG8emtQCgaGAibtErQ+QtQCZ/80HcMwVGS8ttkQ==}
+    engines: {node: '>=20.16.0'}
+
   '@aurelia/template-compiler@2.0.0-beta.27':
     resolution: {integrity: sha512-2J5nz0qGyAb3GwOs1aMMu86w85T6xSsUB4Yx4HUWmVloAHiXNT0XDgBtgEfjep2+LF3pTA2et325+sDwbpKEVQ==}
+    engines: {node: '>=20.16.0'}
+
+  '@aurelia/template-compiler@2.0.0-rc.0':
+    resolution: {integrity: sha512-STc9dAxY0AoDifv5Sb5A5PzjYmrfpeGclmddHT4cEhy+ahQTLCC+koYKCkpugCz75AVkrLpLuLgfwExKGL80KA==}
     engines: {node: '>=20.16.0'}
 
   '@aurelia/vite-plugin@2.0.0-beta.27':
@@ -1129,8 +1161,8 @@ packages:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
 
-  aurelia@2.0.0-beta.27:
-    resolution: {integrity: sha512-A37BtSPK2oaBzuiXIAhkg+4nTLHYAJ/OJLyZe5rjRbHr9inxFlgYH+uI+BJ+k0nsShX/FFT+dfktBJs237t1Tg==}
+  aurelia@2.0.0-rc.0:
+    resolution: {integrity: sha512-nHocABkxW3HOPAo/e5VR6PPJr7qjkUjFksFnEEVEV9r9tWPnBqyW3+x6xtep+U/Fdz9cBT24skgZ2qv50bqxgQ==}
     engines: {node: '>=20.16.0'}
 
   available-typed-arrays@1.0.7:
@@ -2901,8 +2933,8 @@ packages:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
     engines: {node: '>=10.12.0'}
 
-  vite-plugin-node-polyfills@0.24.0:
-    resolution: {integrity: sha512-GA9QKLH+vIM8NPaGA+o2t8PDfFUl32J8rUp1zQfMKVJQiNkOX4unE51tR6ppl6iKw5yOrDAdSH7r/UIFLCVhLw==}
+  vite-plugin-node-polyfills@0.25.0:
+    resolution: {integrity: sha512-rHZ324W3LhfGPxWwQb2N048TThB6nVvnipsqBUJEzh3R9xeK9KI3si+GMQxCuAcpPJBVf0LpDtJ+beYzB3/chg==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
 
@@ -2952,8 +2984,8 @@ packages:
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
 
-  which-typed-array@1.1.19:
-    resolution: {integrity: sha512-rEvr90Bck4WZt9HHFC4DJMsjvu7x+r6bImz0/BrbWb7A2djJ8hnZMrWnHo9F8ssv0OMErasDhftrfROTyqSDrw==}
+  which-typed-array@1.1.20:
+    resolution: {integrity: sha512-LYfpUkmqwl0h9A2HL09Mms427Q1RZWuOHsukfVcKRq9q95iQxdw0ix1JQrqbcDR9PH1QDwf5Qo8OZb5lksZ8Xg==}
     engines: {node: '>= 0.4'}
 
   which@2.0.2:
@@ -3014,23 +3046,40 @@ snapshots:
     dependencies:
       '@aurelia/kernel': 2.0.0-beta.27
 
-  '@aurelia/fetch-client@2.0.0-beta.27':
+  '@aurelia/expression-parser@2.0.0-rc.0':
     dependencies:
-      '@aurelia/kernel': 2.0.0-beta.27
-      '@aurelia/metadata': 2.0.0-beta.27
+      '@aurelia/kernel': 2.0.0-rc.0
+
+  '@aurelia/fetch-client@2.0.0-rc.0':
+    dependencies:
+      '@aurelia/kernel': 2.0.0-rc.0
+      '@aurelia/metadata': 2.0.0-rc.0
 
   '@aurelia/kernel@2.0.0-beta.27':
     dependencies:
       '@aurelia/metadata': 2.0.0-beta.27
       '@aurelia/platform': 2.0.0-beta.27
 
+  '@aurelia/kernel@2.0.0-rc.0':
+    dependencies:
+      '@aurelia/metadata': 2.0.0-rc.0
+      '@aurelia/platform': 2.0.0-rc.0
+
   '@aurelia/metadata@2.0.0-beta.27': {}
+
+  '@aurelia/metadata@2.0.0-rc.0': {}
 
   '@aurelia/platform-browser@2.0.0-beta.27':
     dependencies:
       '@aurelia/platform': 2.0.0-beta.27
 
+  '@aurelia/platform-browser@2.0.0-rc.0':
+    dependencies:
+      '@aurelia/platform': 2.0.0-rc.0
+
   '@aurelia/platform@2.0.0-beta.27': {}
+
+  '@aurelia/platform@2.0.0-rc.0': {}
 
   '@aurelia/plugin-conventions@2.0.0-beta.27':
     dependencies:
@@ -3055,6 +3104,16 @@ snapshots:
       '@aurelia/runtime': 2.0.0-beta.27
       '@aurelia/template-compiler': 2.0.0-beta.27
 
+  '@aurelia/runtime-html@2.0.0-rc.0':
+    dependencies:
+      '@aurelia/expression-parser': 2.0.0-rc.0
+      '@aurelia/kernel': 2.0.0-rc.0
+      '@aurelia/metadata': 2.0.0-rc.0
+      '@aurelia/platform': 2.0.0-rc.0
+      '@aurelia/platform-browser': 2.0.0-rc.0
+      '@aurelia/runtime': 2.0.0-rc.0
+      '@aurelia/template-compiler': 2.0.0-rc.0
+
   '@aurelia/runtime@2.0.0-beta.27':
     dependencies:
       '@aurelia/expression-parser': 2.0.0-beta.27
@@ -3062,11 +3121,24 @@ snapshots:
       '@aurelia/metadata': 2.0.0-beta.27
       '@aurelia/platform': 2.0.0-beta.27
 
+  '@aurelia/runtime@2.0.0-rc.0':
+    dependencies:
+      '@aurelia/expression-parser': 2.0.0-rc.0
+      '@aurelia/kernel': 2.0.0-rc.0
+      '@aurelia/metadata': 2.0.0-rc.0
+      '@aurelia/platform': 2.0.0-rc.0
+
   '@aurelia/template-compiler@2.0.0-beta.27':
     dependencies:
       '@aurelia/expression-parser': 2.0.0-beta.27
       '@aurelia/kernel': 2.0.0-beta.27
       '@aurelia/metadata': 2.0.0-beta.27
+
+  '@aurelia/template-compiler@2.0.0-rc.0':
+    dependencies:
+      '@aurelia/expression-parser': 2.0.0-rc.0
+      '@aurelia/kernel': 2.0.0-rc.0
+      '@aurelia/metadata': 2.0.0-rc.0
 
   '@aurelia/vite-plugin@2.0.0-beta.27(@types/node@24.10.2)':
     dependencies:
@@ -4200,17 +4272,17 @@ snapshots:
 
   astral-regex@2.0.0: {}
 
-  aurelia@2.0.0-beta.27:
+  aurelia@2.0.0-rc.0:
     dependencies:
-      '@aurelia/expression-parser': 2.0.0-beta.27
-      '@aurelia/fetch-client': 2.0.0-beta.27
-      '@aurelia/kernel': 2.0.0-beta.27
-      '@aurelia/metadata': 2.0.0-beta.27
-      '@aurelia/platform': 2.0.0-beta.27
-      '@aurelia/platform-browser': 2.0.0-beta.27
-      '@aurelia/runtime': 2.0.0-beta.27
-      '@aurelia/runtime-html': 2.0.0-beta.27
-      '@aurelia/template-compiler': 2.0.0-beta.27
+      '@aurelia/expression-parser': 2.0.0-rc.0
+      '@aurelia/fetch-client': 2.0.0-rc.0
+      '@aurelia/kernel': 2.0.0-rc.0
+      '@aurelia/metadata': 2.0.0-rc.0
+      '@aurelia/platform': 2.0.0-rc.0
+      '@aurelia/platform-browser': 2.0.0-rc.0
+      '@aurelia/runtime': 2.0.0-rc.0
+      '@aurelia/runtime-html': 2.0.0-rc.0
+      '@aurelia/template-compiler': 2.0.0-rc.0
 
   available-typed-arrays@1.0.7:
     dependencies:
@@ -5065,7 +5137,7 @@ snapshots:
 
   is-typed-array@1.1.15:
     dependencies:
-      which-typed-array: 1.1.19
+      which-typed-array: 1.1.20
 
   isarray@1.0.0: {}
 
@@ -5821,7 +5893,7 @@ snapshots:
 
   md5.js@1.3.5:
     dependencies:
-      hash-base: 3.0.5
+      hash-base: 3.1.2
       inherits: 2.0.4
       safe-buffer: 5.2.1
 
@@ -6500,7 +6572,7 @@ snapshots:
       is-arguments: 1.2.0
       is-generator-function: 1.1.2
       is-typed-array: 1.1.15
-      which-typed-array: 1.1.19
+      which-typed-array: 1.1.20
 
   v8-compile-cache@2.4.0: {}
 
@@ -6510,7 +6582,7 @@ snapshots:
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
 
-  vite-plugin-node-polyfills@0.24.0(vite@7.3.1(@types/node@24.10.2)):
+  vite-plugin-node-polyfills@0.25.0(vite@7.3.1(@types/node@24.10.2)):
     dependencies:
       '@rollup/plugin-inject': 5.0.5
       node-stdlib-browser: 1.3.1
@@ -6536,7 +6608,7 @@ snapshots:
     dependencies:
       makeerror: 1.0.12
 
-  which-typed-array@1.1.19:
+  which-typed-array@1.1.20:
     dependencies:
       available-typed-arrays: 1.0.7
       call-bind: 1.0.8
