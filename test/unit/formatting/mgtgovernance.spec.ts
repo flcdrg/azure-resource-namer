@@ -12,7 +12,7 @@ describe('formatting', () => {
     });
 
     describe('kv', () => {
-      const resource = resources.find(f => f.category == 'Management and governance')!.assets.find(a => a.abbrev === 'kv')!;
+      const resource = resources.find(f => f.category == 'Security')!.assets.find(a => a.abbrev === 'kv')!;
 
       it('valid', () => {
         const result = formatResourceName(

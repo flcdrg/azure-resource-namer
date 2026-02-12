@@ -44,6 +44,10 @@ These notes give AI coding agents the minimum context to work productively in th
 - `vite.config.ts` — dev server config (port 9000).
 - `README.md` — quickstart commands and CLI tips.
 
+## External resources
+
+Abbreviation recommendations for Azure resources: <https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations>
+
 ## Examples
 - Programmatic use in tests:
   ```ts
