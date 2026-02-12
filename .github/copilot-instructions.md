@@ -7,7 +7,7 @@ These notes give AI coding agents the minimum context to work productively in th
 - Core idea: pick a resource type, enter workload/env/region/instance, and compute a name using a pattern plus per‑resource constraints.
 
 ## Architecture at a glance
-- Resource catalog: `src/resources.ts` exports `resources: { category, assets }[]`. Each asset is an `IResource`:
+- Resource catalog: Resources are defined in category-specific files under `src/resources/` (e.g., `src/resources/general.ts`, `src/resources/networking.ts`, `src/resources/storage.ts`) and exported via `src/resources/index.ts` as `resources: { category, assets }[]`. Each asset is an `IResource`:
   - `abbrev` (short code, must be unique across the entire list), `name`, optional `pattern`, `minLength`, `maxLength`, `regex`, `description`.
   - Example with custom pattern (no hyphens): Storage account `st` and Container Registry `cr` use `pattern: '{resource}{workload}{environment}{region}{instance}'`.
 - Name formatting engine: `src/formatting.ts` exports `formatResourceName(selectedResource, workload, environment, region, instance, feedback)`.
@@ -28,7 +28,7 @@ These notes give AI coding agents the minimum context to work productively in th
 ## Project conventions and pitfalls
 - Keep `IResource.abbrev` unique. Matching in `resourcetype-list.ts` uses `abbrev` equality; duplicates lead to ambiguous selection. Audit before adding new entries.
 - When adding a new resource:
-  - Put it in the right category in `src/resources.ts`.
+  - Put it in the right category file in `src/resources/` (e.g., `src/resources/general.ts`, `src/resources/networking.ts`).
   - Add `maxLength`, `regex`, and a human‑readable `description` sourced from Azure docs when available.
   - Use a custom `pattern` if the resource forbids hyphens or casing rules require a different layout.
   - Add or update unit tests that cover the happy path and at least one invalid case for the new rules.
@@ -38,7 +38,7 @@ These notes give AI coding agents the minimum context to work productively in th
 - Import style: prefer root‑based imports from `src` (e.g., `'resources'`, `'formatting'`), not relative `../../` chains.
 
 ## Useful file map
-- `src/resources.ts` — source of truth for resource types and constraints.
+- `src/resources/` — category-specific files (e.g., `general.ts`, `networking.ts`, `storage.ts`) containing resource type definitions and constraints, exported via `src/resources/index.ts`.
 - `src/formatting.ts` — formats and validates names; update here if global naming behavior changes.
 - `test/unit/formatting/*.spec.ts` — examples of expected outputs (e.g., `st`, `cr`, `subnet`, `apim`).
 - `vite.config.ts` — dev server config (port 9000).
@@ -58,7 +58,7 @@ Abbreviation recommendations for Azure resources: <https://learn.microsoft.com/e
   ```
 - Custom pattern resource (no hyphens):
   ```ts
-  // In resources.ts
+  // In src/resources/containers.ts
   { abbrev: 'cr', name: 'Container registry', pattern: '{resource}{workload}{environment}{region}{instance}', ... }
   // => 'crworkloadprodeastus001'
   ```
@@ -66,7 +66,7 @@ Abbreviation recommendations for Azure resources: <https://learn.microsoft.com/e
 ## Contributing changes
 
 - Adding a resource type
-  - Pick the correct category in `src/resources.ts` and ensure `abbrev` is unique across all assets (selection logic matches by exact `abbrev`).
+  - Pick the correct category file in `src/resources/` (e.g., `src/resources/general.ts`, `src/resources/networking.ts`) and ensure `abbrev` is unique across all assets (selection logic matches by exact `abbrev`).
   - Provide `maxLength`, `regex`, and a short `description` sourced from Azure docs; set a custom `pattern` if the service disallows hyphens (e.g., storage, container registry).
   - Add tests under `test/unit/formatting/`: include a happy path (valid) and at least one invalid case using `MockFeedback`. Update inline snapshots if behavior changes.
   - Quick manual check: `pnpm start`, pick the resource, try example inputs, confirm validation messages when invalid.
