@@ -19,7 +19,7 @@ export const general = {
       minLength: 3,
       maxLength: 128,
       description: 'Alphanumerics, hyphens, and underscores. Start with letter or number.',
-      regex: /^[a-zA-Z](?:[a-zA-Z0-9-_]*)?$/
+      regex: /^[a-zA-Z0-9](?:[a-zA-Z0-9-_]*)?$/
     },
     {
       abbrev: 'mg',
