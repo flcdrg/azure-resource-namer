@@ -19,7 +19,7 @@
     "@types/node": "^24.12.0",
     "@typescript-eslint/eslint-plugin": "^8.57.1",
     "@typescript-eslint/parser": "^8.57.1",
-    "eslint": "^10.0.3",
+    "eslint": "^10.1.0",
     "jest": "^28.1.3",
     "jest-cli": "^30.3.0",
     "jest-transform-stub": "^2.0.0",
