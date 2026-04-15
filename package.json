@@ -17,7 +17,7 @@
     "@types/format-unicorn": "^1.1.5",
     "@types/jest": "^28.1.8",
     "@types/node": "^24.12.2",
-    "@typescript-eslint/eslint-plugin": "^8.58.1",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
     "@typescript-eslint/parser": "^8.58.2",
     "eslint": "^10.2.0",
     "jest": "^28.1.3",
