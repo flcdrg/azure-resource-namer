@@ -16,7 +16,7 @@
     "@aurelia/vite-plugin": "^2.0.0-rc.1",
     "@types/format-unicorn": "^1.1.5",
     "@types/jest": "^28.1.8",
-    "@types/node": "^24.12.2",
+    "@types/node": "^24.12.3",
     "@typescript-eslint/eslint-plugin": "^8.59.2",
     "@typescript-eslint/parser": "^8.59.2",
     "eslint": "^10.3.0",
