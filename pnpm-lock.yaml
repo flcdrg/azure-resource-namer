@@ -16,7 +16,7 @@ importers:
     dependencies:
       aurelia:
         specifier: latest
-        version: 2.0.0-rc.1
+        version: 2.0.0-rc.2
       bootstrap:
         specifier: ^5.3.7
         version: 5.3.8(@popperjs/core@2.11.8)
@@ -25,8 +25,8 @@ importers:
         version: 1.1.1
     devDependencies:
       '@aurelia/vite-plugin':
-        specifier: ^2.0.0-rc.1
-        version: 2.0.0-rc.1(@types/node@24.13.2)
+        specifier: ^2.0.0-rc.2
+        version: 2.0.0-rc.2(vite@7.3.2(@types/node@24.13.2))
       '@types/format-unicorn':
         specifier: ^1.1.5
         version: 1.1.5
@@ -81,49 +81,51 @@ importers:
 
 packages:
 
-  '@aurelia/expression-parser@2.0.0-rc.1':
-    resolution: {integrity: sha512-Q3t9px0+e9foKN0XATSB70mCCNljPyhJ1B0n0yEeDIpq4o8WqmeTcneWr51pomsDeZJ8SqSjA4SCuAPc6AcblA==}
+  '@aurelia/expression-parser@2.0.0-rc.2':
+    resolution: {integrity: sha512-z3zKwDlnnkNwIcs4i/bRtfvnL2C6nlZBXf9Gt1JDDdeA+XYGXOC6b1+A7EzHM4GK54ZCiqwZMB9MYwnlLT0M9Q==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/fetch-client@2.0.0-rc.1':
-    resolution: {integrity: sha512-NrWo726OkaKzya661KyhA/1TjpTszfUI4UauCTDIIXYSgQK5U6YM55A9gnuj2Z1i/A4oWfg5XBmnpa5hBWlCvg==}
+  '@aurelia/fetch-client@2.0.0-rc.2':
+    resolution: {integrity: sha512-ieiqMs7xs24geXNzTkZRt2x/dsYJUxTihnY+RpiZAZbxQrkOVPKDWncj6+h67nT2RH3CgozZrKbaig3tJ/HAGw==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/kernel@2.0.0-rc.1':
-    resolution: {integrity: sha512-cgrGCU8JO5Wh981EWqoVC2bt6n2Qk2j7NLuz+7BBG6H2hjJ4TJaaX2d1wtT53RD0IE1/VHnpAW5lrO67BoQFGA==}
+  '@aurelia/kernel@2.0.0-rc.2':
+    resolution: {integrity: sha512-2RHXI3RqjT4FBS+QdqqhOL4K1K9KiyBtpykKDJEPm2xjy54y8Ub93FK/RUHwWqZGHrH4yVS6dESlfhWKt3I5ow==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/metadata@2.0.0-rc.1':
-    resolution: {integrity: sha512-mxsBUayIhBmEmUAojNWNL6cfX3wh4HyHWZycR1huCsALgYZ8sXNUn6FjO/aeIEXFboUYuP7IyY55ZAvFzc5ZKw==}
+  '@aurelia/metadata@2.0.0-rc.2':
+    resolution: {integrity: sha512-GUyjpzEO8tJcPsmygjB2MvjBR4Wl9eO8spVOwypYIDUI1d3MCoBy48dv+sT+Te/WL29bJPaIRkGI8bnnKI36cg==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/platform-browser@2.0.0-rc.1':
-    resolution: {integrity: sha512-goE4nUi4pmaV3hVDN59IDaIfEBd6HhiIIKqLXJbcMRswoWZgsGWOq4dVpBSUwMjXOCJO8Rb5+k02UmUFFZEiRA==}
+  '@aurelia/platform-browser@2.0.0-rc.2':
+    resolution: {integrity: sha512-Bb1HFBc3wRqSxT7NkoHEii8vfDuX4uofRejawNKadQ5UT7NCNq7ffw9vOeAbnIwNjXtyfsEZH1ix9hMqMOfUPA==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/platform@2.0.0-rc.1':
-    resolution: {integrity: sha512-OOrgi4L/IvvrwKqPtyOzHPrJIinFQ/i8JFzpy9I9r67GTwbUT9KkizIQlyK7az1s70LUaYUF5S9xZHBdZLRNHg==}
+  '@aurelia/platform@2.0.0-rc.2':
+    resolution: {integrity: sha512-FzZ48bBlu5XVP3Q83fi39svbDeigPOIJAcvq6fw/ZvvbCV183R0cmupJj5Pl/9mgYnMEQjp+2mOyQOY/xMW7Kg==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/plugin-conventions@2.0.0-rc.1':
-    resolution: {integrity: sha512-PMz07vLDB8aWGGK51HjQHghKj2iGpMqBOZnEXkNuO17Q4QVWosBIP43+fWZIIqsIi+0Xp7O2rVNO6dNIlCjAkw==}
+  '@aurelia/plugin-conventions@2.0.0-rc.2':
+    resolution: {integrity: sha512-Pzc907LcRz52FTDCG12fdD/25K0i7RjPA+VxhOF331QWWME6afF59UMBqQknnOt3LmVw3OmoN3b0pv+SSOxPOw==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/runtime-html@2.0.0-rc.1':
-    resolution: {integrity: sha512-9nYUcERtg2LKtdyvQsSRwBxr5p0tNMcLj8RYLjRm0HKOktLFu152dBRUDJpJYyKLAwKkLsWYLnng5EMKoZFa2w==}
+  '@aurelia/runtime-html@2.0.0-rc.2':
+    resolution: {integrity: sha512-bk/N9Eli5/MbKRL3RsqmiPFQCvkChMzITfXZD7AgVjjvMidZWEenLdIoU19sjBku7Yvbw953VAsLDCqtMFL7ZA==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/runtime@2.0.0-rc.1':
-    resolution: {integrity: sha512-KE2EfecnF9e0tLWGbk+hQK2e+gdTPj16o682G4Z4TFBaRjlq+3dsk+5WDBDLAiD5OQI5Mw00JklVBkAlYkxDnQ==}
+  '@aurelia/runtime@2.0.0-rc.2':
+    resolution: {integrity: sha512-StIZ8C1hNnV4WWQjm9rV4SgSwFb3A2J3PqCT1D/ksuDs9Hiy4BRicXy/E2yvfZXNtQR/miPiaPbC38VS8cStaA==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/template-compiler@2.0.0-rc.1':
-    resolution: {integrity: sha512-6jrb5+RPAJged+eIiDn/KFDjd6kiUUwSu9bQSXrMFJqi3PyhMRH+6AoL8fBGBUZ41CV3sK4D8u7dLhwpDe80gA==}
+  '@aurelia/template-compiler@2.0.0-rc.2':
+    resolution: {integrity: sha512-ukorCLxl/tm1f0i5atq32GHuqfr7zds4koyBucxw1thuq9GNjAJe4Qmq3GxM535h+FVsC3xD+DVfmOmgJ2eG0Q==}
     engines: {node: '>=20.16.0'}
 
-  '@aurelia/vite-plugin@2.0.0-rc.1':
-    resolution: {integrity: sha512-SSeLtPyork4eKxrFc1j+GR30LVs0vejr9GbWr6hAT+ueELmObh7+Mdtv+BXIPlgxqZQcRT3NvSNuFAgBT8wx1g==}
+  '@aurelia/vite-plugin@2.0.0-rc.2':
+    resolution: {integrity: sha512-MCcqz5wwzEw0NSHw3U2UOUaqUEQXbmujgpunbPz+wlXuvfH+aLf4OLm9AOoo3kDTz0cdDlAgJJps468kVmZ/cQ==}
     engines: {node: '>=20.16.0'}
+    peerDependencies:
+      vite: ^7.0.2 || ^8.0.0
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -755,8 +757,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/pluginutils@5.3.0':
-    resolution: {integrity: sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==}
+  '@rollup/pluginutils@5.4.0':
+    resolution: {integrity: sha512-MfPp06CjRLfXQ3wY0R8vJDYBy/MvVcc9OulEfR0B8Iv9ko+GCNaRZ+EpJYFl27LhKsZK0o420sYCRHCjfCgeUg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -907,6 +909,12 @@ packages:
   '@sinonjs/fake-timers@9.1.2':
     resolution: {integrity: sha512-BPS4ynJW/o92PUR4wgriz2Ud5gpST5vz6GQfMixEDK0Z8ZCUv2M7SkBLykH56T++Xs+8ln9zTGbOvNGIe02/jw==}
 
+  '@swc/helpers@0.5.23':
+    resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
+
+  '@swc/wasm@1.15.47':
+    resolution: {integrity: sha512-AdcxrBWz13mPnXxzxr5Lkxkgknwi0fAaArdehpYENB/iIds+WEWVcof3FJKfYAPP7TOeCsaSTKFTSsP3/YX7iw==}
+
   '@tybys/wasm-util@0.10.2':
     resolution: {integrity: sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==}
 
@@ -1046,6 +1054,10 @@ packages:
   '@typescript-eslint/visitor-keys@8.65.0':
     resolution: {integrity: sha512-8C71BQkGjiMmXtop7pHVJu1l2NNShFdkCyD6a2ezzs5vU/L3LRtb69EtcteFwz0mYMPzIgOw0n6OV4VBUWZd7A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@typescript/typescript6@6.0.2':
+    resolution: {integrity: sha512-mbCddXd+jm7hfx7w2YU64/Av4/NqqeG3GoRZgxPcgoTxYjhrcfJRw9ULch71SS4G+Q3bOXFhRvPqjguN0Hyp5w==}
+    hasBin: true
 
   '@ungap/structured-clone@1.3.1':
     resolution: {integrity: sha512-mUFwbeTqrVgDQxFveS+df2yfap6iuP20NAKAsBt5jDEoOTDew+zwLAOilHCeQJOVSvmgCX4ogqIrA0mnyr08yQ==}
@@ -1198,8 +1210,8 @@ packages:
   assert@2.1.0:
     resolution: {integrity: sha512-eLHpSK/Y4nhMJ07gDaAzoX/XAKS8PSaojml3M0DM4JpV1LAi5JOJ/p6H/XWrl8L+DzVEvVCW1z3vWAaB9oTsQw==}
 
-  aurelia@2.0.0-rc.1:
-    resolution: {integrity: sha512-uljX+yBMAyHZwRgeSNxtzHVMoshGSUm83sCnRCbU2420KjTXm8l5shEBC8ZiPf2endha5ODLmIKIEFRXc/b82Q==}
+  aurelia@2.0.0-rc.2:
+    resolution: {integrity: sha512-jz6nFiF3RD2RKXpwFnkkv/eWGy/BEtpANNN4YJ/Lxgzo7kLOWrQ3wt1AyrVyMhwq9966NcbqCwwOnY9LCLJJcg==}
     engines: {node: '>=20.16.0'}
 
   available-typed-arrays@1.0.7:
@@ -1772,6 +1784,9 @@ packages:
   get-stream@6.0.1:
     resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
     engines: {node: '>=10'}
+
+  get-tsconfig@4.14.0:
+    resolution: {integrity: sha512-yTb+8DXzDREzgvYmh6s9vHsSVCHeC0G3PI5bEXNBHtmshPnO+S5O7qgLEOn0I5QvMy6kpZN8K1NKGyilLb93wA==}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -2602,6 +2617,9 @@ packages:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
 
+  resolve-pkg-maps@1.0.0:
+    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
+
   resolve.exports@1.1.1:
     resolution: {integrity: sha512-/NtpHNDN7jWhAaQ9BvBUYZ6YTXsRBgfqWFWP7BZBaoMJO/I3G5OFzvTuWNlZC3aPjins1F+TNrLKsGbH4rfsRQ==}
     engines: {node: '>=10'}
@@ -2890,6 +2908,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   undici-types@7.18.2:
     resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
 
@@ -3036,87 +3059,79 @@ packages:
 
 snapshots:
 
-  '@aurelia/expression-parser@2.0.0-rc.1':
+  '@aurelia/expression-parser@2.0.0-rc.2':
     dependencies:
-      '@aurelia/kernel': 2.0.0-rc.1
+      '@aurelia/kernel': 2.0.0-rc.2
 
-  '@aurelia/fetch-client@2.0.0-rc.1':
+  '@aurelia/fetch-client@2.0.0-rc.2':
     dependencies:
-      '@aurelia/kernel': 2.0.0-rc.1
-      '@aurelia/metadata': 2.0.0-rc.1
+      '@aurelia/kernel': 2.0.0-rc.2
+      '@aurelia/metadata': 2.0.0-rc.2
 
-  '@aurelia/kernel@2.0.0-rc.1':
+  '@aurelia/kernel@2.0.0-rc.2':
     dependencies:
-      '@aurelia/metadata': 2.0.0-rc.1
-      '@aurelia/platform': 2.0.0-rc.1
+      '@aurelia/metadata': 2.0.0-rc.2
+      '@aurelia/platform': 2.0.0-rc.2
 
-  '@aurelia/metadata@2.0.0-rc.1': {}
+  '@aurelia/metadata@2.0.0-rc.2': {}
 
-  '@aurelia/platform-browser@2.0.0-rc.1':
+  '@aurelia/platform-browser@2.0.0-rc.2':
     dependencies:
-      '@aurelia/platform': 2.0.0-rc.1
+      '@aurelia/platform': 2.0.0-rc.2
 
-  '@aurelia/platform@2.0.0-rc.1': {}
+  '@aurelia/platform@2.0.0-rc.2': {}
 
-  '@aurelia/plugin-conventions@2.0.0-rc.1':
+  '@aurelia/plugin-conventions@2.0.0-rc.2':
     dependencies:
-      '@aurelia/expression-parser': 2.0.0-rc.1
-      '@aurelia/kernel': 2.0.0-rc.1
-      '@aurelia/metadata': 2.0.0-rc.1
-      '@aurelia/platform': 2.0.0-rc.1
-      '@aurelia/runtime': 2.0.0-rc.1
-      '@aurelia/runtime-html': 2.0.0-rc.1
-      '@aurelia/template-compiler': 2.0.0-rc.1
+      '@aurelia/expression-parser': 2.0.0-rc.2
+      '@aurelia/kernel': 2.0.0-rc.2
+      '@aurelia/metadata': 2.0.0-rc.2
+      '@aurelia/platform': 2.0.0-rc.2
+      '@aurelia/runtime': 2.0.0-rc.2
+      '@aurelia/runtime-html': 2.0.0-rc.2
+      '@aurelia/template-compiler': 2.0.0-rc.2
+      '@typescript/typescript6': 6.0.2
       modify-code: 2.1.4
       parse5: 7.3.0
-      typescript: 5.9.3
 
-  '@aurelia/runtime-html@2.0.0-rc.1':
+  '@aurelia/runtime-html@2.0.0-rc.2':
     dependencies:
-      '@aurelia/expression-parser': 2.0.0-rc.1
-      '@aurelia/kernel': 2.0.0-rc.1
-      '@aurelia/metadata': 2.0.0-rc.1
-      '@aurelia/platform': 2.0.0-rc.1
-      '@aurelia/platform-browser': 2.0.0-rc.1
-      '@aurelia/runtime': 2.0.0-rc.1
-      '@aurelia/template-compiler': 2.0.0-rc.1
+      '@aurelia/expression-parser': 2.0.0-rc.2
+      '@aurelia/kernel': 2.0.0-rc.2
+      '@aurelia/metadata': 2.0.0-rc.2
+      '@aurelia/platform': 2.0.0-rc.2
+      '@aurelia/platform-browser': 2.0.0-rc.2
+      '@aurelia/runtime': 2.0.0-rc.2
+      '@aurelia/template-compiler': 2.0.0-rc.2
 
-  '@aurelia/runtime@2.0.0-rc.1':
+  '@aurelia/runtime@2.0.0-rc.2':
     dependencies:
-      '@aurelia/expression-parser': 2.0.0-rc.1
-      '@aurelia/kernel': 2.0.0-rc.1
-      '@aurelia/metadata': 2.0.0-rc.1
-      '@aurelia/platform': 2.0.0-rc.1
+      '@aurelia/expression-parser': 2.0.0-rc.2
+      '@aurelia/kernel': 2.0.0-rc.2
+      '@aurelia/metadata': 2.0.0-rc.2
+      '@aurelia/platform': 2.0.0-rc.2
 
-  '@aurelia/template-compiler@2.0.0-rc.1':
+  '@aurelia/template-compiler@2.0.0-rc.2':
     dependencies:
-      '@aurelia/expression-parser': 2.0.0-rc.1
-      '@aurelia/kernel': 2.0.0-rc.1
-      '@aurelia/metadata': 2.0.0-rc.1
+      '@aurelia/expression-parser': 2.0.0-rc.2
+      '@aurelia/kernel': 2.0.0-rc.2
+      '@aurelia/metadata': 2.0.0-rc.2
 
-  '@aurelia/vite-plugin@2.0.0-rc.1(@types/node@24.13.2)':
+  '@aurelia/vite-plugin@2.0.0-rc.2(vite@7.3.2(@types/node@24.13.2))':
     dependencies:
-      '@aurelia/kernel': 2.0.0-rc.1
-      '@aurelia/metadata': 2.0.0-rc.1
-      '@aurelia/platform': 2.0.0-rc.1
-      '@aurelia/plugin-conventions': 2.0.0-rc.1
-      '@aurelia/runtime': 2.0.0-rc.1
+      '@aurelia/kernel': 2.0.0-rc.2
+      '@aurelia/metadata': 2.0.0-rc.2
+      '@aurelia/platform': 2.0.0-rc.2
+      '@aurelia/plugin-conventions': 2.0.0-rc.2
+      '@aurelia/runtime': 2.0.0-rc.2
       '@rollup/pluginutils': 5.0.2
+      '@swc/helpers': 0.5.23
+      '@swc/wasm': 1.15.47
+      get-tsconfig: 4.14.0
       loader-utils: 2.0.4
       vite: 7.3.2(@types/node@24.13.2)
     transitivePeerDependencies:
-      - '@types/node'
-      - jiti
-      - less
-      - lightningcss
       - rollup
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - terser
-      - tsx
-      - yaml
 
   '@babel/code-frame@7.27.1':
     dependencies:
@@ -3893,7 +3908,7 @@ snapshots:
 
   '@rollup/plugin-inject@5.0.5':
     dependencies:
-      '@rollup/pluginutils': 5.3.0
+      '@rollup/pluginutils': 5.4.0
       estree-walker: 2.0.2
       magic-string: 0.30.21
 
@@ -3903,11 +3918,11 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 2.3.2
 
-  '@rollup/pluginutils@5.3.0':
+  '@rollup/pluginutils@5.4.0':
     dependencies:
       '@types/estree': 1.0.9
       estree-walker: 2.0.2
-      picomatch: 4.0.4
+      picomatch: 4.0.5
 
   '@rollup/rollup-android-arm-eabi@4.60.1':
     optional: true
@@ -4003,6 +4018,12 @@ snapshots:
   '@sinonjs/fake-timers@9.1.2':
     dependencies:
       '@sinonjs/commons': 1.8.6
+
+  '@swc/helpers@0.5.23':
+    dependencies:
+      tslib: 2.8.1
+
+  '@swc/wasm@1.15.47': {}
 
   '@tybys/wasm-util@0.10.2':
     dependencies:
@@ -4187,6 +4208,10 @@ snapshots:
       '@typescript-eslint/types': 8.65.0
       eslint-visitor-keys: 5.0.1
 
+  '@typescript/typescript6@6.0.2':
+    dependencies:
+      '@typescript/old': typescript@6.0.3
+
   '@ungap/structured-clone@1.3.1': {}
 
   '@unrs/resolver-binding-android-arm-eabi@1.11.1':
@@ -4300,17 +4325,17 @@ snapshots:
       object.assign: 4.1.7
       util: 0.12.5
 
-  aurelia@2.0.0-rc.1:
+  aurelia@2.0.0-rc.2:
     dependencies:
-      '@aurelia/expression-parser': 2.0.0-rc.1
-      '@aurelia/fetch-client': 2.0.0-rc.1
-      '@aurelia/kernel': 2.0.0-rc.1
-      '@aurelia/metadata': 2.0.0-rc.1
-      '@aurelia/platform': 2.0.0-rc.1
-      '@aurelia/platform-browser': 2.0.0-rc.1
-      '@aurelia/runtime': 2.0.0-rc.1
-      '@aurelia/runtime-html': 2.0.0-rc.1
-      '@aurelia/template-compiler': 2.0.0-rc.1
+      '@aurelia/expression-parser': 2.0.0-rc.2
+      '@aurelia/fetch-client': 2.0.0-rc.2
+      '@aurelia/kernel': 2.0.0-rc.2
+      '@aurelia/metadata': 2.0.0-rc.2
+      '@aurelia/platform': 2.0.0-rc.2
+      '@aurelia/platform-browser': 2.0.0-rc.2
+      '@aurelia/runtime': 2.0.0-rc.2
+      '@aurelia/runtime-html': 2.0.0-rc.2
+      '@aurelia/template-compiler': 2.0.0-rc.2
 
   available-typed-arrays@1.0.7:
     dependencies:
@@ -4980,6 +5005,10 @@ snapshots:
 
   get-stream@6.0.1: {}
 
+  get-tsconfig@4.14.0:
+    dependencies:
+      resolve-pkg-maps: 1.0.0
+
   glob-parent@5.1.2:
     dependencies:
       is-glob: 4.0.3
@@ -5441,7 +5470,7 @@ snapshots:
       jest-regex-util: 30.4.0
       jest-util: 30.4.1
       jest-worker: 30.4.1
-      picomatch: 4.0.4
+      picomatch: 4.0.5
       walker: 1.0.8
     optionalDependencies:
       fsevents: 2.3.3
@@ -5490,7 +5519,7 @@ snapshots:
       chalk: 4.1.2
       graceful-fs: 4.2.11
       jest-util: 30.4.1
-      picomatch: 4.0.4
+      picomatch: 4.0.5
       pretty-format: 30.4.1
       slash: 3.0.0
       stack-utils: 2.0.6
@@ -6193,6 +6222,8 @@ snapshots:
 
   resolve-from@5.0.0: {}
 
+  resolve-pkg-maps@1.0.0: {}
+
   resolve.exports@1.1.1: {}
 
   resolve@1.22.11:
@@ -6507,6 +6538,8 @@ snapshots:
       is-typed-array: 1.1.15
 
   typescript@5.9.3: {}
+
+  typescript@6.0.3: {}
 
   undici-types@7.18.2: {}
 
