@@ -9,7 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "aurelia": "latest",
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.9",
     "format-unicorn": "^1.1.1"
   },
   "devDependencies": {
